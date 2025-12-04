@@ -38,10 +38,10 @@ My Ubuntu Server is running inside VirtualBox using the default NAT network mode
 ---
 
 At this stage, I am able to verify that:
-The VM has internet connectivity through NAT
-The network interface is active
-The system can be updated using apt
-The server is reachable internally from the workstation
+-The VM has internet connectivity through NAT
+-The network interface is active
+-The system can be updated using apt
+-The server is reachable internally from the workstation
 This completes the basic networking setup required for upcoming security and monitoring tasks.
 ---
 
@@ -50,11 +50,11 @@ During Week 1, I used several Linux command-line tools to collect system informa
 ---
 
 Each command provides different information:
-uname -a → Shows kernel version and system architecture
-lsb_release -a → Shows Ubuntu version
-free -h → Shows memory (RAM) usage
-df -h → Shows disk usage
-ip addr → Shows all network interfaces and their IP addresses
+-uname -a → Shows kernel version and system architecture
+-lsb_release -a → Shows Ubuntu version
+-free -h → Shows memory (RAM) usage
+-df -h → Shows disk usage
+-ip addr → Shows all network interfaces and their IP addresses
 ---
 
 Below is the screenshot containing all required command output:
