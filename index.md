@@ -1,9 +1,9 @@
 # Operating System Coursework Journal
 
-**Student Name:** Sapana Pandey
-**Student ID:** A00034818
-**Module:** Operating System
-**University:** University of Roehampton
+- **Student Name:** Sapana Pandey
+- **Student ID:** A00034818
+- **Module:** Operating System
+- **University:** University of Roehampton
 
 ---
 
