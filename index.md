@@ -26,6 +26,7 @@ The following diagram represents the setup I created for Week 1.
 For this coursework, I selected Ubuntu Server 24.04 LTS as my operating system. I chose this distribution because it provides long-term security updates and strong stability. Ubuntu is widely used in cloud computing environments, which means the skills I learn here directly apply to real-world professional practice. Compared to alternatives like Debian and CentOS Stream, Ubuntu offers more up-to-date/newer pacakages and easy setup and installation which is ideal for this coursework.
 
 Overall, Ubuntu Server offers a balance of ease-of-use, security, stability, and industry relevance, making it the most appropriate distribution for this operating systems project.
+
 ---
 
 ## 4. Workstation configuration Decision
@@ -65,6 +66,7 @@ Below is the screenshot containing all required command output:
 This was my first time installing a headless Linux server. I learned how virtual machines work, how to navigate the Linux terminal, and how to collect system information. I now understand basic OS concepts such as memory usage, kernel version, storage allocation, and network interfaces. These skills prepare me for future weeks focused on SSH configuration, security hardening, monitoring, and performance evaluation.
 
 Overall, Week 1 helped me build confidence using Linux and understanding the structure of an operating system.
+
 ---
    
 
