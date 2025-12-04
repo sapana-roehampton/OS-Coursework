@@ -1,9 +1,10 @@
-WEEK 1 : INITIAL PLANNING AND SETUP
+# WEEK 1 : INITIAL PLANNING AND SETUP
 
-1. Overview of week 1
+## 1. Overview of week 1
 This week focused on setting up the server environment required for the Operating Systems coursework. I installed Ubuntu Server 24.04 LTS inside VirtualBox on my Windows laptop, configured basic system settings, explored the Linux terminal for the first time, and collected essential system information using basic Linux commands. This setup created the foundation for all future security, monitoring, and performance tasks in later weeks.
+---
 
-2. System Architecture Diagram
+## 2. System Architecture Diagram
 The following diagram represents the setup I created for Week 1.
 
 +--------------------------------------------------------------+
@@ -18,6 +19,7 @@ The following diagram represents the setup I created for Week 1.
 |                     Ubuntu Server 24.04 LTS VM               |
 |       Headless server accessed via terminal & SSH            |
 +--------------------------------------------------------------+
+---
 
 3. Distribution Selection Justification
 For this coursework, I selected Ubuntu Server 24.04 LTS as my operating system. I chose this distribution because it provides long-term security updates and strong stability. Ubuntu is widely used in cloud computing environments, which means the skills I learn here directly apply to real-world professional practice. Compared to alternatives like Debian and CentOS Stream, Ubuntu offers more up-to-date/newer pacakages and easy setup and installation which is ideal for this coursework.
