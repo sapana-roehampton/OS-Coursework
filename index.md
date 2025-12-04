@@ -1,5 +1,10 @@
 # OS Coursework Journal
 
+Student Name: Sapana Pandey
+Student ID: A00034818
+Module: Operating System
+University: University of Roehampton
+
 Welcome to my Operating Systems Coursework Journal.  
 This site documents my weekly progress across 7 weeks.
 
