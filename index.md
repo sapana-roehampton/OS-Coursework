@@ -57,6 +57,7 @@ Each command provides different information:
 -  free -h  → Shows memory (RAM) usage
 -  df -h  → Shows disk usage
 -  ip addr  → Shows all network interfaces and their IP addresses
+
 ---
 
 Below is the screenshot containing all required command output:
