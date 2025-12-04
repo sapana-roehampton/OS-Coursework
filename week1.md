@@ -72,7 +72,7 @@ Each command provides different information:
 
 
 Below is the screenshot containing all required command output: Screenshot 2025-12-04 170842
-<img width="1281" height="840" alt="command" src="https://github.com/user-attachments/assets/8a97ddee-c34f-4299-9a48-3dfed2354bd8" />
+<img width="1281" height="840" alt="command" src="https://github.com/user-attachments/assets/37b98688-9191-4976-bd92-d020051d95f5" />
 
 ---
 
