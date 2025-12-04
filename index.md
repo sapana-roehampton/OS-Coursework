@@ -23,8 +23,6 @@ The following diagram represents the setup I created for Week 1.
 
 ## 3. Distribution Selection Justification
 For this coursework, I selected Ubuntu Server 24.04 LTS as my operating system. I chose this distribution because it provides long-term security updates and strong stability. Ubuntu is widely used in cloud computing environments, which means the skills I learn here directly apply to real-world professional practice. Compared to alternatives like Debian and CentOS Stream, Ubuntu offers more up-to-date/newer pacakages and easy setup and installation which is ideal for this coursework.
----
-
 Overall, Ubuntu Server offers a balance of ease-of-use, security, stability, and industry relevance, making it the most appropriate distribution for this operating systems project.
 ---
 
@@ -57,7 +55,8 @@ ip addr → Shows all network interfaces and their IP addresses
 ---
 
 Below is the screenshot containing all required command output:
-<img width="1276" height="845" alt="image" src="https://github.com/user-attachments/assets/166ed712-c860-4967-9013-3880e23a7784" />
+<img width="1281" height="840" alt="Screenshot 2025-12-04 170842" src="https://github.com/user-attachments/assets/3f34c68c-ab9e-4e7f-b5b0-f347da728e18" />
+
 ---
 
 ## 7. Reflection on Week 1:
