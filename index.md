@@ -1,12 +1,16 @@
-# OS Coursework Journal
+# Operating System Coursework Journal
 
 **Student Name:** Sapana Pandey
 **Student ID:** A00034818
 **Module:** Operating System
 **University:** University of Roehampton
 
+---
+
 Welcome to my Operating Systems Coursework Journal.  
 This site documents my weekly progress across 7 weeks.
+
+---
 
 ##  Table of Contents
 - [Week 1: System Setup & Baseline Evidence](week1.md)
@@ -16,3 +20,5 @@ This site documents my weekly progress across 7 weeks.
 - [Week 5: Advanced Security & Automation Scripts](week5.md)
 - [Week 6: Performance Testing & Optimisation](week6.md)
 - [Week 7: Security Audit & System Evaluation](week7.md)
+
+ --- 
