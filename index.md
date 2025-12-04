@@ -1,9 +1,4 @@
----
-title: OS Coursework Journal - Week 1
-layout: default
----
-
-#WEEK 1 : INITIAL PLANNING AND SETUP
+WEEK 1 : INITIAL PLANNING AND SETUP
 
 1. Overview of week 1
 This week focused on setting up the server environment required for the Operating Systems coursework. I installed Ubuntu Server 24.04 LTS inside VirtualBox on my Windows laptop, configured basic system settings, explored the Linux terminal for the first time, and collected essential system information using basic Linux commands. This setup created the foundation for all future security, monitoring, and performance tasks in later weeks.
