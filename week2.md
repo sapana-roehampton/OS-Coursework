@@ -17,7 +17,7 @@ From the workstation (using SSH):
 -  ping  – to measure basic network latency  
 -  curl or wget  – to test response times from services running on the server  
 
-Later, if needed, I may also use more advanced tools such as `iperf3` for network throughput testing or `stress-ng` for generating controlled load.
+Later, if needed, I may also use more advanced tools such as iperf3 for network throughput testing or stress-ng for generating controlled load.
 
 ### 1.2 Metrics I will monitor
 
@@ -27,7 +27,7 @@ For each application that I test in Week 6, I plan to record:
 - **Memory usage** – total used, free and cached memory  
 - **Disk I/O** – read/write throughput and I/O wait time  
 - **Network performance** – latency (ping) and throughput (amount of data sent/received)  
-- **System load** – using `uptime` or `top` to see the load average  
+- **System load** – using uptime or top to see the load average  
 - **Service behaviour** – for server applications, I will note response times and if any errors appear
 
 ### 1.3 Testing approach
@@ -48,12 +48,12 @@ This checklist describes the security settings I plan to implement on my Ubuntu 
 
 - Disable direct root login over SSH  
 - Disable password-based SSH authentication and use **key-based authentication** only  
-- Change SSH configuration file `/etc/ssh/sshd_config` safely and restart the SSH service  
+- Change SSH configuration file /etc/ssh/sshd_config safely and restart the SSH service  
 - Limit SSH access to my workstation IP only (combined with firewall rules)  
 
 ### 2.2 Firewall Configuration
 
-- Enable `ufw` (Uncomplicated Firewall) on the server  
+- Enable ufw (Uncomplicated Firewall) on the server  
 - Allow **SSH only** from my workstation IP address  
 - Deny all incoming connections by default, except necessary services used in testing  
 - Keep all outgoing connections allowed (for updates and package installs)  
@@ -67,22 +67,22 @@ This checklist describes the security settings I plan to implement on my Ubuntu 
 
 ### 2.4 Automatic Updates
 
-- Install and configure `unattended-upgrades`  
+- Install and configure unattended-upgrades  
 - Enable automatic security updates  
 - Verify that configuration files are correct and that upgrade logs are being written  
 
 ### 2.5 User and Privilege Management
 
 - Create a non-root administrative user (already done in Week 1 install)  
-- Ensure this user is in the `sudo` group with least-privilege usage  
-- Disable or lock direct `root` login where appropriate  
+- Ensure this user is in the sudo group with least-privilege usage  
+- Disable or lock direct root login where appropriate  
 - Use strong, unique passwords on all accounts  
 
 ### 2.6 Network Security
 
 - Keep the server inside the VirtualBox NAT network (no direct exposure to the internet)  
 - Only run services that are necessary for coursework (no extra daemons)  
-- Regularly check open ports using `ss -tuln` or `netstat`  
+- Regularly check open ports using ss -tuln or netstat  
 - Later, configure `fail2ban` to protect against SSH brute-force attacks
 
 This checklist will be used in Weeks 4 and 5 when I implement and then verify each security control.
@@ -105,7 +105,7 @@ The attacker could gain remote access to the server, read or modify files, insta
 - Disable password-based SSH login and use **key-based authentication only**  
 - Restrict SSH access to just my workstation IP using firewall rules  
 - Install and configure **fail2ban** to ban IP addresses that show repeated failed SSH logins  
-- Regularly review SSH logs (`/var/log/auth.log`) for suspicious activity  
+- Regularly review SSH logs (/var/log/auth.log) for suspicious activity  
 
 ---
 
@@ -119,7 +119,7 @@ Extra open ports can expose services that are not secured or not needed, increas
 
 **Mitigations:**
 
-- Use `ufw` with a **default deny** incoming policy  
+- Use ufw with a **default deny** incoming policy  
 - Explicitly allow only:
   - SSH from my workstation  
   - Any other port that I intentionally use for testing  
@@ -131,17 +131,17 @@ Extra open ports can expose services that are not secured or not needed, increas
 ### Threat 3 – Privilege escalation by a local user
 
 **Description:**  
-If a normal user account on the server is compromised, an attacker might try to gain `sudo` privileges or exploit misconfigurations to become root.
+If a normal user account on the server is compromised, an attacker might try to gain sudo privileges or exploit misconfigurations to become root.
 
 **Impact:**  
 Full control over the system, ability to disable security settings, install rootkits, or damage files.
 
 **Mitigations:**
 
-- Use a **single administrative user** with `sudo` access and strong password  
+- Use a **single administrative user** with sudo access and strong password  
 - Avoid giving unnecessary `sudo` permissions to other accounts  
-- Use `sudo` for individual commands instead of logging in as root  
-- Monitor `/var/log/auth.log` for suspicious `sudo` attempts  
+- Use sudo for individual commands instead of logging in as root  
+- Monitor `/var/log/auth.log` for suspicious sudo attempts  
 
 ---
 
