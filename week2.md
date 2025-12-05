@@ -38,7 +38,7 @@ For each workload I will:
 2. Start the application or service from the workstation using SSH.  
 3. Use the monitoring tools above while the workload is running.  
 4. Save the results in a small table (CPU, memory, disk, network).  
-5. Stop the workload and check if the system returns to normal.
+5. Stop the workload and check whether the system returns to normal.
 
 ## 2. Security Configuration Checklist
 
@@ -48,15 +48,15 @@ This checklist describes the security settings I plan to implement on my Ubuntu 
 
 - Disable direct root login over SSH  
 - Disable password-based SSH authentication and use **key-based authentication** only  
-- Change SSH configuration file /etc/ssh/sshd_config safely and restart the SSH service  
-- Limit SSH access to my workstation IP only (combined with firewall rules)  
+- Edit SSH configuration file /etc/ssh/sshd_config safely 
+- Allow SSH access only from my workstation's IP address
 
 ### 2.2 Firewall Configuration
 
 - Enable ufw (Uncomplicated Firewall) on the server  
 - Allow **SSH only** from my workstation IP address  
-- Deny all incoming connections by default, except necessary services used in testing  
-- Keep all outgoing connections allowed (for updates and package installs)  
+- Block all incoming connections by default, except necessary services used in testing  
+- Keep all outgoing connection allowed  
 
 ### 2.3 Mandatory Access Control (MAC)
 
@@ -83,10 +83,9 @@ This checklist describes the security settings I plan to implement on my Ubuntu 
 - Keep the server inside the VirtualBox NAT network (no direct exposure to the internet)  
 - Only run services that are necessary for coursework (no extra daemons)  
 - Regularly check open ports using ss -tuln or netstat  
-- Later, configure `fail2ban` to protect against SSH brute-force attacks
+- Later, configure fail2ban to protect against SSH brute-force attacks
 
-This checklist will be used in Weeks 4 and 5 when I implement and then verify each security control.
-
+This checklist will be used in later weeks to verify security configuration.
 
 ## 3. Threat Model
 
@@ -139,9 +138,9 @@ Full control over the system, ability to disable security settings, install root
 **Mitigations:**
 
 - Use a **single administrative user** with sudo access and strong password  
-- Avoid giving unnecessary `sudo` permissions to other accounts  
+- Avoid giving unnecessary sudo permissions to other accounts  
 - Use sudo for individual commands instead of logging in as root  
-- Monitor `/var/log/auth.log` for suspicious sudo attempts  
+- Monitor /var/log/auth.log for suspicious sudo attempts  
 
 ---
 
