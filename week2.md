@@ -155,10 +155,10 @@ Attackers could exploit old vulnerabilities to gain access or crash services.
 
 **Mitigations:**
 
-- Configure `unattended-upgrades` for automatic security updates  
-- Run `sudo apt update && sudo apt upgrade` regularly  
+- Configure unattended-upgrades for automatic security updates  
+- Run sudo apt update && sudo apt upgrade regularly  
 - Reboot the server when required after kernel or major package upgrades  
-- Periodically review `apt` logs to confirm that updates are being applied
+- Periodically review apt logs to confirm that updates are being applied
 
 ---
 
