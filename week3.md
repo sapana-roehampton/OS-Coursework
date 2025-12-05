@@ -1,12 +1,12 @@
 ## 1. Application Selection Matrix
 
-| Workload Type        | Application | Reason for Selection |
-|----------------------|-------------|----------------------|
-| CPU-intensive        | stress-ng   | Generates high CPU load and is widely used for performance testing. |
-| RAM-intensive        | stress-ng (memory mode) | Allows controlled memory stress to check RAM usage and behavior. |
-| Disk I/O-intensive   | dd command  | Simple built-in Linux tool to test disk read/write performance. |
-| Network-intensive    | iperf3      | Measures network throughput and latency accurately. |
-| Server application   | Apache2 Web Server | Common server application used to analyze response time and resource usage. |
+| Workload Type        | Application | Reason for Selection                                                        |
+|----------------------|-------------|-----------------------------------------------------------------------------|
+| CPU-intensive        | stress-ng   | Generates high CPU load and is widely used for performance testing.         |
+| RAM-intensive        | stress-ng   | Allows controlled memory stress to check RAM usage and behavior.            |
+| Disk I/O-intensive   | dd command  | Simple built-in Linux tool to test disk read/write performance.             |
+| Network-intensive    | iperf3      | Measures network throughput and latency accurately.                         |
+| Server application   | Apache2     | Common server application used to analyze response time and resource usage. |
 
 
 ## 2. Installation Documentation (SSH Commands)
