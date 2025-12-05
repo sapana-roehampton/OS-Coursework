@@ -65,3 +65,7 @@ I will use systemctl status apache2, curl http://<server-ip>, top, and journalct
 
 All measurements will be recorded manually into a performance table during Week 6.
 
+## Reflection:
+Week 3 helped me understand how different applications stress different parts of an operating system. Selecting tools like stress-ng, dd, iperf3, and Apache taught me how CPU, memory, disk, and network resources behave under load. Writing installation commands and predicting resource usage also made me think more carefully about how Linux manages performance. Planning the monitoring strategy showed me which tools are best for measuring each type of workload and why monitoring is essential for identifying bottlenecks. This week built a strong foundation for the performance testing I will perform in Week 6.
+
+
