@@ -162,4 +162,8 @@ Attackers could exploit old vulnerabilities to gain access or crash services.
 ---
 
 This threat model helps me understand which risks are most relevant to my small virtual server and shows how my planned security configuration directly reduces those risks.
+
+## Reflection:
+During Week 2, I learned how important planning is before making any security changes to a server. Instead of directly configuring tools like SSH or firewalls, I focused on understanding why these controls are needed and how they work together to protect a system. Creating the security checklist helped me see how different layers of security (SSH, firewall, AppArmor, updates, user management) connect to form a proper baseline. Developing the threat model also made me think like an attacker and identify weaknesses before they become real problems. This week improved my understanding of security principles and prepared me for the hands-on configuration work in later weeks.
+
    
