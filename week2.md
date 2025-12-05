@@ -9,13 +9,13 @@ connect to my server remotely using SSH from my workstation( Windows laptop). Th
 
 From the workstation (using SSH):
 
-- top or htop – to watch CPU and memory usage in real time  
-- free -h – to check RAM usage before and after tests  
-- df -h – to confirm available disk space  
-- vmstat – to monitor CPU, memory and I/O statistics together  
-- iostat – to measure disk I/O performance during heavy workloads  
-- ping – to measure basic network latency  
-- curl or wget – to test response times from services running on the server  
+-  top or htop  – to watch CPU and memory usage in real time  
+-  free -h  – to check RAM usage before and after tests  
+-  df -h  – to confirm available disk space  
+-  vmstat  – to monitor CPU, memory and I/O statistics together  
+-  iostat  – to measure disk I/O performance during heavy workloads  
+-  ping  – to measure basic network latency  
+-  curl or wget  – to test response times from services running on the server  
 
 Later, if needed, I may also use more advanced tools such as `iperf3` for network throughput testing or `stress-ng` for generating controlled load.
 
