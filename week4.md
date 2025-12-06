@@ -33,6 +33,8 @@ After adding the user, its sudo privileges were confirmed.
 
 ### 📸 Evidence – Non-root User Creation
 ![Non-root user creation](non-root-user.png)
+<img width="1275" height="954" alt="non-root-user" src="https://github.com/user-attachments/assets/b751d2e6-9ee3-4755-b85b-923955f81268" />
+
 
 ---
 
@@ -56,9 +58,13 @@ sudo ufw status
 
 ### 📸 Evidence – UFW Enabled
 ![UFW Enabled](ufw-enable.png)
+<img width="1273" height="956" alt="ufw-enable" src="https://github.com/user-attachments/assets/c0cecdb6-2b1a-4acf-af81-41e8bf0a0c5a" />
+
 
 ### 📸 Evidence – UFW Rules Status
 ![UFW Status](ufw-status.png)
+<img width="1277" height="953" alt="ufw-status" src="https://github.com/user-attachments/assets/8043228e-54b8-4fdd-b6a2-5b660256f874" />
+
 
 ---
 
@@ -83,6 +89,8 @@ sudo systemctl restart ssh
 
 ### 📸 Evidence – SSH Root Login Disabled
 ![SSH Root Login Disabled](sshdconfig-after.png)
+<img width="1279" height="956" alt="sshdconfig-after" src="https://github.com/user-attachments/assets/af5dfa06-b576-49fa-964f-17349a77709a" />
+
 
 ---
 
@@ -104,6 +112,8 @@ The login succeeded, confirming that:
 
 ### 📸 Evidence – Successful SSH Login After Hardening
 ![SSH Login Success](ssh-login-after-hardening.png)
+<img width="2332" height="1214" alt="ssh-login-after-hardening" src="https://github.com/user-attachments/assets/4d00efc6-53d5-47d3-9aa4-5c184cb2fa98" />
+
 
 ---
 
