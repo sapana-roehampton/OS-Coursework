@@ -24,10 +24,10 @@ A non-root administrative user named **student** was created.
 This reduces security risks because root access is highly privileged and should never be used for normal administration.
 
 ### Commands Used:
-```bash
-sudo adduser student
-sudo usermod -aG sudo student
-```
+
+- sudo adduser student
+- sudo usermod -aG sudo student
+
 
 After adding the user, its sudo privileges were confirmed.
 
