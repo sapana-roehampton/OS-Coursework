@@ -1,3 +1,10 @@
+## 🔗 Quick Navigation
+[🏠 Home](index.md)  
+[⬅️ Week 3](week3.md) | [Week 5 ➡️](week5.md)
+
+---
+
+
 # Week 4 – Initial System Configuration & Security Implementation
 
 ---
@@ -131,4 +138,11 @@ I learned how to:
 These tasks reflect industry-standard system administration practices and prepared me for more advanced security automation in Week 5.
 
 ---
+
+---
+
+## 🔗 Quick Navigation
+[🏠 Back to Home](index.md)  
+[⬅️ Week 3](week3.md) | [Week 5 ➡️](week5.md)
+
 
