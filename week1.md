@@ -1,3 +1,9 @@
+## 🔗 Quick Navigation  
+[Week 1](week1.md) | [Week 2](week2.md) | [Week 3](week3.md) | [Week 4](week4.md) | [Week 5](week5.md) | [Week 6](week6.md) | [Week 7](week7.md)
+
+---
+
+
 # WEEK 1 : INITIAL PLANNING AND SETUP
 
 ## 1. Overview of Week 1
@@ -85,11 +91,3 @@ Overall, Week 1 helped me build confidence using Linux and understanding the str
 
 ---
 
-## 🔗 Quick Navigation  
-[Week 1](week1.md) •  
-[Week 2](week2.md) •  
-[Week 3](week3.md) •  
-[Week 4](week4.md) •  
-[Week 5](week5.md) •  
-[Week 6](week6.md) •  
-[Week 7](week7.md)
