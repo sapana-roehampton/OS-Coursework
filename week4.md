@@ -44,11 +44,11 @@ The Uncomplicated Firewall (UFW) was enabled to protect the server by controllin
 SSH access was explicitly allowed so that remote administration remained possible.
 
 ### Commands Used:
-```bash
-sudo ufw allow 22/tcp
-sudo ufw enable
-sudo ufw status
-```
+
+- sudo ufw allow 22/tcp
+- sudo ufw enable
+- sudo ufw status
+
 
 ### Firewall Status Confirmed:
 - Firewall is **active**
@@ -99,9 +99,9 @@ sudo systemctl restart ssh
 After implementing all security settings, I tested secure SSH access from Windows PowerShell using the **student** user.
 
 ### Command Used:
-```powershell
-ssh -p 2222 student@localhost
-```
+
+- ssh -p 2222 student@localhost
+
 
 The login succeeded, confirming that:
 
