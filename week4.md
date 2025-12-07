@@ -5,7 +5,7 @@
 ## 1. Introduction
 
 Week 4 focused on strengthening the security of my Ubuntu Server by implementing essential system configuration tasks.  
-All actions were completed **remotely via SSH** from my Windows workstation terminal, following the coursework requirement that the server must only be administered through command-line and never via the VirtualBox console.
+All actions were completed remotely via SSH from my Windows workstation terminal, following the coursework requirement that the server must only be administered through command-line and never via the VirtualBox console.
 
 The main goals for this week were:
 
