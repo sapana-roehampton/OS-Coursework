@@ -115,8 +115,8 @@ This script automatically checks the most important security controls implemente
 
 ```bash
 #!/bin/bash
-# security-baseline.sh
-# Checks core server security settings.
+#!security-baseline.sh
+#!Checks core server security settings.
 
 echo "===== SECURITY BASELINE CHECK ====="
 
@@ -140,7 +140,7 @@ systemctl is-enabled unattended-upgrades
 
 echo "===== CHECK COMPLETE ====="
 
-### **Evidence : This output demonstrates that all configured security layers are active and functioning correctly
+### Evidence 
 <img width="1290" height="948" alt="week5-security-baseline (2)" src="https://github.com/user-attachments/assets/d6aea9ca-ebd1-4a2e-95e0-c72794cc821b" />
 
 ---
@@ -150,8 +150,8 @@ echo "===== CHECK COMPLETE ====="
 This script runs on the workstation, connects to the server via SSH, and extracts live performance metrics.
 
 #!/bin/bash
-# monitor-server.sh
-# Collects performance metrics from the server via SSH.
+#!monitor-server.sh
+#!Collects performance metrics from the server via SSH.
 
 #!/bin/bash
 # monitor-server.sh
@@ -196,7 +196,7 @@ System uptime
 
 Top processes consuming CPU
 
-### Evidence: Remote Monitoring Output
+### Evidence  
 <img width="2286" height="1103" alt="monitor-server-output" src="https://github.com/user-attachments/assets/aacbab0c-ba49-4581-aac6-52025129cf3f" />
 
 
