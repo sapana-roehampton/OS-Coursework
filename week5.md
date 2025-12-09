@@ -154,19 +154,18 @@ echo "===== CHECK COMPLETE ====="
 This script runs on the workstation, connects to the server via SSH, and extracts live performance metrics.
 
 #!/bin/bash
-#!monitor-server.sh
-#!Collects performance metrics from the server via SSH.
 
-#!/bin/bash
-# monitor-server.sh
-# Collects server performance metrics via SSH.
+#monitor-server.sh
+
+#Collects server performance metrics via SSH.
 
 SERVER="sapana@localhost"
 PORT=2222
 
 echo "===== REMOTE SERVER MONITORING ====="
 
-# Show CPU usage
+#Show CPU usage
+
 echo "[1] CPU Usage:"
 ssh -p $PORT $SERVER "top -bn1 | grep 'Cpu'"
 
