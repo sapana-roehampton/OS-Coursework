@@ -169,19 +169,23 @@ echo "===== REMOTE SERVER MONITORING ====="
 echo "[1] CPU Usage:"
 ssh -p $PORT $SERVER "top -bn1 | grep 'Cpu'"
 
-# Show memory usage
+#Show memory usage
+
 echo "[2] Memory Usage:"
 ssh -p $PORT $SERVER "free -h"
 
-# Show disk usage
+#Show disk usage
+
 echo "[3] Disk Usage:"
 ssh -p $PORT $SERVER "df -h"
 
-# Show system uptime
+#Show system uptime
+
 echo "[4] Uptime:"
 ssh -p $PORT $SERVER "uptime -p"
 
-# Show top 5 processes
+#Show top 5 processes
+
 echo "[5] Top 5 Processes:"
 ssh -p $PORT $SERVER "ps aux --sort=-%cpu | head -6"
 
