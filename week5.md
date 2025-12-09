@@ -113,10 +113,10 @@ This script automatically checks the most important security controls implemente
 
 ###  **Final Script Code **
 
-```bash
 #!/bin/bash
-#!security-baseline.sh
-#!Checks core server security settings.
+# !security-baseline.sh
+# !Checks core server security settings.
+
 
 echo "===== SECURITY BASELINE CHECK ====="
 
@@ -140,8 +140,9 @@ systemctl is-enabled unattended-upgrades
 
 echo "===== CHECK COMPLETE ====="
 
-### Evidence 
-<img width="1290" height="948" alt="week5-security-baseline (2)" src="https://github.com/user-attachments/assets/d6aea9ca-ebd1-4a2e-95e0-c72794cc821b" />
+### Evidence
+
+<img width="1290" height="948" alt="week5-security-baseline (2)" src="https://github.com/user-attachments/assets/03bf2c92-cffe-4835-8771-3b2181e69f17" />
 
 ---
 
