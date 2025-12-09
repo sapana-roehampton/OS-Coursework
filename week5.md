@@ -97,7 +97,7 @@ The screenshot confirms:
 
 ---
 
-# 5. Security Baseline Script (`security-baseline.sh`)
+# 5. Security Baseline Script (security-baseline.sh)
 
 This script automatically checks the most important security controls implemented in Week 4 and Week 5.
 
@@ -111,16 +111,19 @@ This script automatically checks the most important security controls implemente
 
 ---
 
-###  **Final Script Code **
+###  **Final Script Code**
 
 #!/bin/bash
-# !security-baseline.sh
-# !Checks core server security settings.
+
+#security-baseline.sh
+
+#Checks core server security settings.
 
 
 echo "===== SECURITY BASELINE CHECK ====="
 
 echo "[1] Firewall Status:"
+
 sudo ufw status
 
 echo "[2] SSH Root Login:"
