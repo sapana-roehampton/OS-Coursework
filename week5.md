@@ -149,7 +149,7 @@ echo "===== CHECK COMPLETE ====="
 
 ---
 
-# 6. Remote Monitoring Script (`monitor-server.sh`)
+# 6. Remote Monitoring Script (monitor-server.sh)
 
 This script runs on the workstation, connects to the server via SSH, and extracts live performance metrics.
 
