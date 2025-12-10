@@ -79,6 +79,7 @@ sudo apt install stress -y
 
 
 **Installation Evidence**
+
 <img width="1287" height="965" alt="week6-stress-install" src="https://github.com/user-attachments/assets/4a43ab84-f3b3-4c7b-a4cc-6b68b9087d73" />
 
 ---
@@ -92,6 +93,7 @@ stress --cpu 2 --timeout 120
 
 
 **Stress Test Running Evidence**
+
 <img width="1282" height="949" alt="week6-stress-running" src="https://github.com/user-attachments/assets/fb6405dc-6d93-4670-9b46-6441374869e1" />
 
 ---
@@ -191,6 +193,7 @@ sudo blockdev --getra /dev/sda
 → 4096
 
 **Evidence**
+
 <img width="1272" height="885" alt="week6-disk-after" src="https://github.com/user-attachments/assets/70068065-f3e5-416d-a160-1172eb908852" />
 
 # **Effect of Disk Optimisation**
