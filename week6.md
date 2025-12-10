@@ -147,6 +147,7 @@ Load average increased significantly.
 **Conclusion:**
 This is expected under artificial load. CPU becomes the limiting factor, confirming the system behaves correctly under pressure.
 
+
 **Memory Behaviour**
 
 Memory usage increased from 418 MiB → 479 MiB during the test.
@@ -162,6 +163,7 @@ RAM usage stayed within safe limits
 **Conclusion:**
 No memory shortage, but swappiness tuning can improve reaction time under future load.
 
+
 **Disk I/O Bottleneck**
 
 Disk usage did not change, but the read-ahead value was only 256 KB, which is low for performance.
@@ -175,7 +177,42 @@ Higher disk latency under file operations
 **Conclusion:**
 Increasing read-ahead improves disk throughput.
 
-# 5. System Optimisations Applied
+---
+
+# 5. Network Performance Analysis (Latency & Throughput)
+
+## Latency Measurement (Ping)
+
+**Evidence**
+
+week6-latency-ping.png
+<img width="1246" height="786" alt="week6-network-ping" src="https://github.com/user-attachments/assets/ec28d1e1-d982-4be4-85f2-d06096ccac1a" />
+
+---
+
+## Throughput Measurement (SCP File Transfer Test)
+```
+Command used:
+
+scp -P 2222 sapana@localhost:/home/sapana/testfile.bin .
+```
+
+Result:
+
+File size: 100 MB
+
+Transfer speed: 12.6 MB/s
+
+Transfer time: 7 seconds
+
+**Evidence**
+
+week6-throughput-test.png
+<img width="1105" height="616" alt="week6-throughput-test" src="https://github.com/user-attachments/assets/1e85d1cd-2f3f-4bf0-96ce-49f821bb0d4f" />
+
+---
+
+# 6. System Optimisations Applied
 
 Two optimisations were applied inside system optimisation.
 
@@ -250,7 +287,7 @@ sudo blockdev --getra /dev/sda
   
 ---
 
-#  6. Post-Optimisation Testing
+#  7. Post-Optimisation Testing
 
 Post optimisation testing was performed using the same baseline commands.
 
@@ -268,7 +305,7 @@ sudo blockdev --getra /dev/sda
 
 ---
 
-#  7. Performance Data Table
+#  8. Performance Data Table
 
 | Test Scenario         | CPU Load | Memory Used | Memory Free | Disk Usage | SSH Response Time |
 |-----------------------|----------|-------------|-------------|------------|-------------------|
@@ -278,7 +315,7 @@ sudo blockdev --getra /dev/sda
 
 ---
 
-#  8. Performance Visualisations (Graph Data)
+#  9. Performance Visualisations (Graph Data)
 
 Placeholders:
 
@@ -287,7 +324,7 @@ Placeholders:
 
 ---
 
-#  9. Performance Analysis
+#  10. Final Performance Analysis
 
 **Baseline**  
 - Memory mostly free  
@@ -311,7 +348,7 @@ Placeholders:
 
 ---
 
-#  10. Conclusion
+#  11. Conclusion
 
 By the end of Week 6, I accomplished:
 
