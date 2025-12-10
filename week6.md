@@ -39,28 +39,27 @@ time ssh -p 2222 sapana@localhost exit
 cat /proc/sys/vm/swappiness
 ```
 
-### Baseline CPU & Memory
-
+**Baseline CPU & Memory**
 **Evidence**
 <img width="1285" height="946" alt="week6-baseline-cpu-mem" src="https://github.com/user-attachments/assets/c02a141d-8526-450f-8984-97d4fcf07e7d" />
 
 ---
 
-## Baseline Disk Usage
+### Baseline Disk Usage
 
 **Evidence**
 <img width="1265" height="949" alt="week6-baseline-disk-usage" src="https://github.com/user-attachments/assets/2be46151-9f5a-4eb0-a0ba-3c1bb987288f" />
 
 ---
 
-## SSH Latency Output
+### SSH Latency Output
 
 **Evidence**
 <img width="1152" height="673" alt="week6-ssh-latency-before" src="https://github.com/user-attachments/assets/58a91ca6-aa36-4268-a9ea-59dd14a879f4" />
 
 ---
 
-## Swappiness Before Optimisation
+### Swappiness Before Optimisation
 
 **Evidence**
 <img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/b6d6e347-8494-4b95-9340-fc03290bbe54" />
