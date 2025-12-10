@@ -228,8 +228,9 @@ cat /proc/sys/vm/swappiness
 → 60
 
 **Evidence**
+<img width="1285" height="805" alt="week6-before-swappiness" src="https://github.com/user-attachments/assets/b375289a-0c75-4205-9b5d-9d8abcaf2854" />
 
-<img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/06651ba5-90c7-41bc-82a4-be3b77208670" />
+---
 
 Apply new value:
 sudo sysctl vm.swappiness=10
@@ -265,8 +266,8 @@ sudo blockdev --getra /dev/sda
 → 256
 
 **Evidence**
+<img width="1288" height="804" alt="week6-disk-before" src="https://github.com/user-attachments/assets/e4717684-cd4e-43fa-a9d7-4f8d60fc5e57" />
 
-<img width="1284" height="884" alt="week6-disk-before" src="https://github.com/user-attachments/assets/33e0a3f7-d530-49ae-8fbb-ff55aa980818" />
 
 Apply new value:
 sudo blockdev --setra 4096 /dev/sda
