@@ -127,7 +127,7 @@ ps aux --sort=-%cpu | head -6
 <img width="1631" height="1496" alt="week6-load-uptime-top5" src="https://github.com/user-attachments/assets/9d501449-eba0-4342-a284-6df6ae18e181" />
 
 
-# 5. System Optimisations Applied
+# 4. System Optimisations Applied
 
 Two optimisations were applied inside system optimisation.
 
@@ -201,7 +201,7 @@ sudo blockdev --getra /dev/sda
   
 ---
 
-#  6. Post-Optimisation Testing
+#  5. Post-Optimisation Testing
 
 Post optimisation testing was performed using the same baseline commands.
 
@@ -219,7 +219,7 @@ sudo blockdev --getra /dev/sda
 
 ---
 
-#  7. Performance Data Table
+#  6. Performance Data Table
 
 | Test Scenario         | CPU Load | Memory Used | Memory Free | Disk Usage | SSH Response Time |
 |-----------------------|----------|-------------|-------------|------------|-------------------|
@@ -229,7 +229,7 @@ sudo blockdev --getra /dev/sda
 
 ---
 
-#  8. Performance Visualisations (Graph Data)
+#  7. Performance Visualisations (Graph Data)
 
 Placeholders:
 
@@ -238,7 +238,7 @@ Placeholders:
 
 ---
 
-#  9. Performance Analysis
+#  8. Performance Analysis
 
 **Baseline**  
 - Memory mostly free  
@@ -262,7 +262,7 @@ Placeholders:
 
 ---
 
-#  10. Conclusion
+#  9. Conclusion
 
 By the end of Week 6, I accomplished:
 
