@@ -221,11 +221,11 @@ sudo blockdev --getra /dev/sda
 
 #  7. Performance Data Table
 
-| Test Scenario          | CPU Load | Memory Used | Memory Free | Disk Usage | SSH Response Time |
+| Test Scenario         | CPU Load | Memory Used | Memory Free | Disk Usage | SSH Response Time |
 |-----------------------|----------|-------------|-------------|------------|-------------------|
-| Baseline              | ~0.01    | ~418 Mi     | ~3.3 Gi     | 29%        | — |
-| Under Stress          | 1.00     | ~479 Mi     | ~3.2 Gi     | 29%        | — |
-| Post-Optimisation     | ~0.01    | ~435 Mi     | ~3.3 Gi     | 29%        | 7.607s |
+| Baseline              | 0.01     | 418 Mi      | 3.3 Gi      | 29%        | —                 |
+| Under Stress          | 1.00     | 479 Mi      | 3.2 Gi      | 29%        | —                 |
+| Post-Optimisation     | 0.01     | 435 Mi      | 3.3 Gi      | 29%        | 7.607s            |
 
 ---
 
