@@ -29,7 +29,7 @@ The testing steps included:
 
 Before applying any load or optimisation, I captured baseline system performance for CPU, memory, disk usage, and system load.
 
-### Commands Used:
+Commands Used
 ```
 top -bn1 | head -5
 free -h
@@ -39,7 +39,7 @@ time ssh -p 2222 sapana@localhost exit
 cat /proc/sys/vm/swappiness
 ```
 
-## Baseline CPU & Memory
+### Baseline CPU & Memory
 
 **Evidence**
 <img width="1285" height="946" alt="week6-baseline-cpu-mem" src="https://github.com/user-attachments/assets/c02a141d-8526-450f-8984-97d4fcf07e7d" />
