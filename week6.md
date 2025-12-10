@@ -94,7 +94,7 @@ stress --cpu 2 --timeout 120
 
 
 
-# Load CPU, Memory & Disk
+## Load CPU, Memory & Disk
 
 **Commands Used**
 
@@ -109,7 +109,7 @@ df -h /
 
 ---
 
-# Load Uptime and Top 5 CPU Processes
+## Load Uptime and Top 5 CPU Processes
 
 **Commands Used**
 
@@ -126,7 +126,7 @@ ps aux --sort=-%cpu | head -6
 
 Two optimisations were applied inside system optimisation.
 
-#  Optimisation 1 — Memory Optimisation(Better Memory Usage)
+## Optimisation 1 — Memory Optimisation(Better Memory Usage)
 
 Swappiness controls how aggressively Linux swaps memory to disk.  
 The default value 60 causes unnecessary swapping, slowing the system.
@@ -136,6 +136,8 @@ Reducing it to **10** improves RAM performance and reduces latency.
 Before:
 `cat /proc/sys/vm/swappiness`  
 → 60
+
+**Evidence**
 <img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/06651ba5-90c7-41bc-82a4-be3b77208670" />
 
 Apply new value:
@@ -149,7 +151,7 @@ After:
 `cat /proc/sys/sys/vm/swappiness`  
 → 10
 
-Evidence - Swappiness after optimisation
+**Evidence**
 <img width="1316" height="835" alt="week6-swappiness-after" src="https://github.com/user-attachments/assets/47e6e439-0f49-496e-b226-7c728ad685f3" />
 
 # **Effect of Swappiness Optimisation**
@@ -161,7 +163,7 @@ Evidence - Swappiness after optimisation
 
 ---
 
-#  Optimisation 2 — Disk I/O Optimisation(Better Disk Performance)
+##  Optimisation 2 — Disk I/O Optimisation(Better Disk Performance)
 
 The default disk readahead value on the VM was 256 KB, which limits sequential disk performance.  
 Increasing it to 4096 KB allows the kernel to preload more data, improving throughput.
@@ -169,6 +171,8 @@ Increasing it to 4096 KB allows the kernel to preload more data, improving throu
 Before:
 `sudo blockdev --getra /dev/sda`  
 → 256
+
+**Evidence**
 <img width="1284" height="884" alt="week6-disk-before" src="https://github.com/user-attachments/assets/33e0a3f7-d530-49ae-8fbb-ff55aa980818" />
 
 Apply new value:
@@ -178,7 +182,7 @@ After:
 `sudo blockdev --getra /dev/sda`  
 → 4096
 
-Evidence - Disk after optimisation
+**Evidence**
 <img width="1272" height="885" alt="week6-disk-after" src="https://github.com/user-attachments/assets/70068065-f3e5-416d-a160-1172eb908852" />
 
 # **Effect of Disk Optimisation**
