@@ -42,24 +42,28 @@ cat /proc/sys/vm/swappiness
 
 **Baseline CPU & Memory**
 **Evidence**
+
 <img width="1285" height="946" alt="week6-baseline-cpu-mem" src="https://github.com/user-attachments/assets/c02a141d-8526-450f-8984-97d4fcf07e7d" />
 
 ---
 
 **Baseline Disk Usage**
 **Evidence**
+
 <img width="1265" height="949" alt="week6-baseline-disk-usage" src="https://github.com/user-attachments/assets/2be46151-9f5a-4eb0-a0ba-3c1bb987288f" />
 
 ---
 
 **SSH Latency Output**
 **Evidence**
+
 <img width="1152" height="673" alt="week6-ssh-latency-before" src="https://github.com/user-attachments/assets/58a91ca6-aa36-4268-a9ea-59dd14a879f4" />
 
 ---
 
 **Swappiness Before Optimisation**
 **Evidence**
+
 <img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/b6d6e347-8494-4b95-9340-fc03290bbe54" />
 
 ---
@@ -104,6 +108,7 @@ df -h /
 ```
 
 **Load Test CPU, Memory, Disk Evidence**
+
 <img width="1642" height="1433" alt="week6-load-cpu-mem-disk" src="https://github.com/user-attachments/assets/dd6578a4-b302-4309-876e-f3ab96ff08bf" />
 
 ---
@@ -118,6 +123,7 @@ ps aux --sort=-%cpu | head -6
 ```
 
 **Load Uptime + Top Processes Evidence**
+
 <img width="1631" height="1496" alt="week6-load-uptime-top5" src="https://github.com/user-attachments/assets/9d501449-eba0-4342-a284-6df6ae18e181" />
 
 
@@ -152,6 +158,7 @@ cat /proc/sys/sys/vm/swappiness
 → 10
 
 **Evidence**
+
 <img width="1316" height="835" alt="week6-swappiness-after" src="https://github.com/user-attachments/assets/47e6e439-0f49-496e-b226-7c728ad685f3" />
 
 # **Effect of Swappiness Optimisation**
@@ -173,6 +180,7 @@ sudo blockdev --getra /dev/sda
 → 256
 
 **Evidence**
+
 <img width="1284" height="884" alt="week6-disk-before" src="https://github.com/user-attachments/assets/33e0a3f7-d530-49ae-8fbb-ff55aa980818" />
 
 Apply new value:
@@ -206,6 +214,7 @@ sudo blockdev --getra /dev/sda
 ```
 
 **Evidence - post optimisation**
+
 <img width="1266" height="878" alt="post-optimisation" src="https://github.com/user-attachments/assets/148fd30f-5573-498d-bf0e-ff76c92ac18f" />
 
 ---
