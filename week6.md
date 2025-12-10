@@ -129,7 +129,53 @@ ps aux --sort=-%cpu | head -6
 <img width="1631" height="1496" alt="week6-load-uptime-top5" src="https://github.com/user-attachments/assets/9d501449-eba0-4342-a284-6df6ae18e181" />
 
 
-# 4. System Optimisations Applied
+# 4. Bottleneck Analysis
+
+After analysing the system under load, several performance bottlenecks were identified.
+These bottlenecks guided the optimisation steps implemented later.
+
+**CPU Bottleneck**
+
+During the stress test, CPU usage reached 100% across available cores.
+
+The process stress used ~47% per core.
+
+System responsiveness slowed.
+
+Load average increased significantly.
+
+**Conclusion:**
+This is expected under artificial load. CPU becomes the limiting factor, confirming the system behaves correctly under pressure.
+
+**Memory Behaviour**
+
+Memory usage increased from 418 MiB → 479 MiB during the test.
+
+However:
+
+No swapping occurred
+
+Swap space remained fully available
+
+RAM usage stayed within safe limits
+
+**Conclusion:**
+No memory shortage, but swappiness tuning can improve reaction time under future load.
+
+**Disk I/O Bottleneck**
+
+Disk usage did not change, but the read-ahead value was only 256 KB, which is low for performance.
+
+Impacts:
+
+Slower sequential reads
+
+Higher disk latency under file operations
+
+**Conclusion:**
+Increasing read-ahead improves disk throughput.
+
+# 5. System Optimisations Applied
 
 Two optimisations were applied inside system optimisation.
 
@@ -204,7 +250,7 @@ sudo blockdev --getra /dev/sda
   
 ---
 
-#  5. Post-Optimisation Testing
+#  6. Post-Optimisation Testing
 
 Post optimisation testing was performed using the same baseline commands.
 
@@ -222,7 +268,7 @@ sudo blockdev --getra /dev/sda
 
 ---
 
-#  6. Performance Data Table
+#  7. Performance Data Table
 
 | Test Scenario         | CPU Load | Memory Used | Memory Free | Disk Usage | SSH Response Time |
 |-----------------------|----------|-------------|-------------|------------|-------------------|
@@ -232,7 +278,7 @@ sudo blockdev --getra /dev/sda
 
 ---
 
-#  7. Performance Visualisations (Graph Data)
+#  8. Performance Visualisations (Graph Data)
 
 Placeholders:
 
@@ -241,7 +287,7 @@ Placeholders:
 
 ---
 
-#  8. Performance Analysis
+#  9. Performance Analysis
 
 **Baseline**  
 - Memory mostly free  
@@ -265,7 +311,7 @@ Placeholders:
 
 ---
 
-#  9. Conclusion
+#  10. Conclusion
 
 By the end of Week 6, I accomplished:
 
