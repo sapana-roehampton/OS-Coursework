@@ -240,12 +240,12 @@ Placeholders:
 
 #  9. Performance Analysis
 
-### Baseline  
+**Baseline**  
 - Memory mostly free  
 - Disk usage stable  
 - System idle and responsive
   
-### Under Stress  
+**Under Stress**
 - CPU hit 100% utilisation as expected  
 - Memory usage increased slightly  
 - System remained stable  
