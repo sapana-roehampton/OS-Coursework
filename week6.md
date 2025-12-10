@@ -143,7 +143,7 @@ cat /proc/sys/vm/swappiness
 Apply new value:
 sudo sysctl vm.swappiness=10
 
-Make permanent:  
+Make permanent:
 Edit /etc/sysctl.conf and add:
 vm.swappiness=10
 
@@ -169,17 +169,17 @@ The default disk readahead value on the VM was 256 KB, which limits sequential d
 Increasing it to 4096 KB allows the kernel to preload more data, improving throughput.
 
 Before:
-`sudo blockdev --getra /dev/sda`  
+sudo blockdev --getra /dev/sda
 → 256
 
 **Evidence**
 <img width="1284" height="884" alt="week6-disk-before" src="https://github.com/user-attachments/assets/33e0a3f7-d530-49ae-8fbb-ff55aa980818" />
 
 Apply new value:
-`sudo blockdev --setra 4096 /dev/sda`
+sudo blockdev --setra 4096 /dev/sda
 
 After:
-`sudo blockdev --getra /dev/sda`  
+sudo blockdev --getra /dev/sda
 → 4096
 
 **Evidence**
