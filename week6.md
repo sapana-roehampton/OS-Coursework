@@ -137,17 +137,18 @@ cat /proc/sys/vm/swappiness
 → 60
 
 **Evidence**
+
 <img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/06651ba5-90c7-41bc-82a4-be3b77208670" />
 
 Apply new value:
-`sudo sysctl vm.swappiness=10`
+sudo sysctl vm.swappiness=10
 
 Make permanent:  
-Edit `/etc/sysctl.conf` and add:
-`vm.swappiness=10`
+Edit /etc/sysctl.conf and add:
+vm.swappiness=10
 
 After:
-`cat /proc/sys/sys/vm/swappiness`  
+cat /proc/sys/sys/vm/swappiness
 → 10
 
 **Evidence**
