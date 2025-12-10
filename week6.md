@@ -29,7 +29,7 @@ The testing steps included:
 
 Before applying any load or optimisation, I captured baseline system performance for CPU, memory, disk usage, and system load.
 
-Commands Used
+**Commands Used**
 ```
 top -bn1 | head -5
 free -h
@@ -39,28 +39,26 @@ time ssh -p 2222 sapana@localhost exit
 cat /proc/sys/vm/swappiness
 ```
 
+
 **Baseline CPU & Memory**
 **Evidence**
 <img width="1285" height="946" alt="week6-baseline-cpu-mem" src="https://github.com/user-attachments/assets/c02a141d-8526-450f-8984-97d4fcf07e7d" />
 
 ---
 
-### Baseline Disk Usage
-
+**Baseline Disk Usage**
 **Evidence**
 <img width="1265" height="949" alt="week6-baseline-disk-usage" src="https://github.com/user-attachments/assets/2be46151-9f5a-4eb0-a0ba-3c1bb987288f" />
 
 ---
 
-### SSH Latency Output
-
+**SSH Latency Output**
 **Evidence**
 <img width="1152" height="673" alt="week6-ssh-latency-before" src="https://github.com/user-attachments/assets/58a91ca6-aa36-4268-a9ea-59dd14a879f4" />
 
 ---
 
-### Swappiness Before Optimisation
-
+**Swappiness Before Optimisation**
 **Evidence**
 <img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/b6d6e347-8494-4b95-9340-fc03290bbe54" />
 
@@ -70,10 +68,11 @@ cat /proc/sys/vm/swappiness
 
 To evaluate how the operating system behaves under heavy load, I installed and used the stress tool:
 
-Command Used
+**Command Used**
 ```
 sudo apt install stress -y
 ```
+
 
 **Installation Evidence**
 <img width="1287" height="965" alt="week6-stress-install" src="https://github.com/user-attachments/assets/4a43ab84-f3b3-4c7b-a4cc-6b68b9087d73" />
@@ -82,10 +81,11 @@ sudo apt install stress -y
 
 ## CPU Load Test (Stress Running)
 
-Command Used
+**Command Used**
 ```
 stress --cpu 2 --timeout 120
 ```
+
 
 **Stress Test Running Evidence**
 <img width="1282" height="949" alt="week6-stress-running" src="https://github.com/user-attachments/assets/fb6405dc-6d93-4670-9b46-6441374869e1" />
@@ -95,7 +95,9 @@ stress --cpu 2 --timeout 120
 
 
 # Load CPU, Memory & Disk
-Commands Used:
+
+**Commands Used**
+
 ```
 top -bn1 | head -5
 free -h
@@ -103,20 +105,20 @@ df -h /
 ```
 
 **Load Test CPU, Memory, Disk Evidence**
-![Load Test CPU-Mem-Disk](week6-load-cpu-mem-disk.png)
 <img width="1642" height="1433" alt="week6-load-cpu-mem-disk" src="https://github.com/user-attachments/assets/dd6578a4-b302-4309-876e-f3ab96ff08bf" />
 
 ---
 
-#Load Uptime and Top 5 CPU Processes
-Commands Used:
+# Load Uptime and Top 5 CPU Processes
+
+**Commands Used**
+
 ```
 uptime
 ps aux --sort=-%cpu | head -6
 ```
 
 **Load Uptime + Top Processes Evidence**
-![Load Test Uptime + Top Processes](week6-load-uptime-top5.png)
 <img width="1631" height="1496" alt="week6-load-uptime-top5" src="https://github.com/user-attachments/assets/9d501449-eba0-4342-a284-6df6ae18e181" />
 
 
