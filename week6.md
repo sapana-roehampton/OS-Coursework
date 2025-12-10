@@ -63,8 +63,8 @@ cat /proc/sys/vm/swappiness
 
 **Swappiness Before Optimisation**
 **Evidence**
+<img width="1285" height="805" alt="week6-before-swappiness" src="https://github.com/user-attachments/assets/cd1d562a-c6bf-40f0-a627-d0cdec1c7604" />
 
-<img width="1287" height="900" alt="week6-swappiness-before" src="https://github.com/user-attachments/assets/b6d6e347-8494-4b95-9340-fc03290bbe54" />
 
 ---
 
