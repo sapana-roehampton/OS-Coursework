@@ -93,7 +93,6 @@ stress --cpu 2 --timeout 120
 ---
 
 
-
 ## Load CPU, Memory & Disk
 
 **Commands Used**
@@ -134,7 +133,7 @@ Reducing it to **10** improves RAM performance and reduces latency.
 
 
 Before:
-`cat /proc/sys/vm/swappiness`  
+cat /proc/sys/vm/swappiness
 → 60
 
 **Evidence**
