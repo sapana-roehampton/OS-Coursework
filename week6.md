@@ -330,6 +330,8 @@ sudo blockdev --getra /dev/sda
 
 [SSH Response Time Chart]
 
+<img width="600" height="371" alt="SSH-response- Time" src="https://github.com/user-attachments/assets/b95e2aa0-7065-4976-80b3-c55b27eefe71" />
+
 
 ---
 
