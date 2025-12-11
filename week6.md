@@ -34,9 +34,7 @@ Before applying any load or optimisation, I captured baseline system performance
 top -bn1 | head -5
 free -h
 df -h
-sudo blockdev --getra /dev/sda
 time ssh -p 2222 sapana@localhost exit
-cat /proc/sys/vm/swappiness
 ```
 
 
@@ -58,13 +56,6 @@ cat /proc/sys/vm/swappiness
 **Evidence**
 
 <img width="1152" height="673" alt="week6-ssh-latency-before" src="https://github.com/user-attachments/assets/58a91ca6-aa36-4268-a9ea-59dd14a879f4" />
-
----
-
-**Swappiness Before Optimisation**
-**Evidence**
-<img width="1285" height="805" alt="week6-before-swappiness" src="https://github.com/user-attachments/assets/cd1d562a-c6bf-40f0-a627-d0cdec1c7604" />
-
 
 ---
 
