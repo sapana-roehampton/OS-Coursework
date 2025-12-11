@@ -48,8 +48,11 @@ sudo lynis audit system
 ### Key Baseline Observations
 
 **Firewall:** Enabled and functioning correctly 
+
 **Malware Scanner:** No malware scanner was installed as the system did not have rkhunter.
+
 **Compliance Checks:** Some compliance modules were incomplete or missing.
+
 **SSH Configuration:** Weak. Several SSH settings required hardening.
 
 ### Initial Recommendations
