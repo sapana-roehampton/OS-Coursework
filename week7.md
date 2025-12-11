@@ -265,6 +265,7 @@ The Nmap scan confirms that the system’s network exposure is limited and contr
 Only essential Windows system services and the VM’s SSH port are visible, with the vast majority of ports securely closed. This reflects a low attack surface and aligns with best-practice security hardening for a virtualized lab environment.
 
 ---
+---
 
 ## Task 3: SSH Security Verification
 
@@ -275,6 +276,10 @@ This task focused on reviewing and validating the security configuration of the 
 ### 1. Reviewing SSH Configuration (`sshd_config`)
 
 The SSH configuration file was inspected to ensure that unsafe options were disabled and essential security controls were active.
+
+```
+sudo nano /etc/ssh/sshd_config
+```
 
 Key verified settings:
 
