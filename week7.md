@@ -45,14 +45,12 @@ sudo lynis audit system
 - **Total Tests Executed:** 256  
 - **Plugins Activated:** 1  
 
-### 🔹Key Baseline Observations
+### Key Baseline Observations
 
-| Category | Status | Notes |
-|---------|--------|-------|
-| Firewall | ✔ Enabled | UFW already active |
-| Malware Scanner | ❌ Not installed | No rkhunter/chkrootkit present |
-| Compliance Checks | Incomplete | Additional modules required |
-| SSH Configuration | Weak | Hardening improvements required |
+**Firewall:** Enabled and functioning correctly 
+**Malware Scanner:** No malware scanner was installed as the system did not have rkhunter.
+**Compliance Checks:** Some compliance modules were incomplete or missing.
+**SSH Configuration:** Weak. Several SSH settings required hardening.
 
 ### Initial Recommendations
 
@@ -160,16 +158,15 @@ sudo lynis audit system
 - **Total Tests Executed:** 261  
 - **Plugins Activated:** 1  
 
-### Observed Improvements
 
-| Improvement | Result |
-|-------------|--------|
-| Malware scanner installed | ✔ Warning resolved |
-| SSH configuration strengthened | ✔ Fewer insecure defaults detected |
-| Automatic security updates enabled | ✔ Update-related warnings removed |
-| Increased test coverage | ✔ More checks performed than before |
+### Observed Improvements After Remediation 
 
-While the overall score increased from **60 → 62**, this still represents meaningful security improvements since Lynis becomes stricter as hardening progresses.
+A malware scanner was successfully installed, resolving the previous warning.
+SSH security was strengthened, reducing insecure defaults and improving authentication settings.
+Automatic security updates were enabled, removing update-related warnings.
+The overall system audit improved with more security tests executed than before.
+
+Even though the hardening score increased only slightly from 60 to 62, this still reflects meaningful improvement because Lynis becomes stricter as more configurations are hardened.
 
 ---
 
