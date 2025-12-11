@@ -2,7 +2,7 @@
 
 ## Task 1: Lynis Security Audit (Before & After Remediation)
 
-### 1. Introduction
+## 1. Introduction
 
 This week focused on performing a full security audit of my Ubuntu server using **Lynis**, a widely used security auditing tool for Linux-based systems. Lynis performs deep inspection of system configurations, authentication policies, firewall settings, update mechanisms, and overall system hardening.  
 The objective for this task was to carry out a baseline audit, examine weaknesses, apply targeted remediations, and finally run a second audit to measure improvement.
@@ -200,3 +200,70 @@ The steps completed include:
 The system now demonstrates a stronger security posture and aligns more closely with best-practice hardening guidelines. This concludes the Lynis audit and evaluation stage for Week 7.
 
 ---
+---
+
+## Task 2: Network Security Assessment
+
+## Installing Nmap (Host Machine)
+
+Before performing the network scan, Nmap was installed on the Windows host machine using the following command in PowerShell:
+```
+winget install nmap
+```
+
+This successfully installed Nmap (version 7.80), enabling full port-scanning and service enumeration for the Ubuntu VM.
+
+**Evidence**
+
+<img width="2349" height="1184" alt="week7-nmap-install" src="https://github.com/user-attachments/assets/e8e9b287-eec6-493c-acf6-464b7379efc2" />
+
+---
+
+## Nmap Scan
+
+A full TCP port and service scan was performed from the Windows host using Nmap to identify exposed services on both the host system and the Ubuntu virtual machine.
+
+Command used:
+```
+nmap -sV -p- localhost -Pn
+```
+
+**Purpose of the scan:**
+
+- Detect open ports
+- Identify running services and versions
+- Assess potential network exposure
+- Confirm VM port forwarding for SSH
+
+## Nmap Scan Results
+
+The scan showed that 65,512 ports were closed, while several key ports were open:
+1. The host responded immediately, showing it was online and reachable.
+2. Port 2222/tcp displayed OpenSSH 9.6p1 (Ubuntu) — this is the VM’s SSH service.
+3. Windows internal services such as RPC (135/tcp) and SMB (445/tcp) were visible.
+4. Several high-range dynamic ports (49664–49680, 51779–51782) were open, which is normal for Windows networking.
+5. A few encrypted or unknown services were detected but are typical for background host processes.
+6. One port showed as filtered, confirming firewall activity.
+
+**Evidence:**
+
+<img width="2879" height="1687" alt="week7-nmap-scan" src="https://github.com/user-attachments/assets/15c84974-5ca5-41fe-b4b7-73021545b6ec" />
+
+---
+
+## Interpretation
+
+- SSH on port 2222 is correctly exposed from the Ubuntu VM.
+- Windows system services (RPC, SMB, dynamic ports) are normal and expected.
+- Encrypted/unknown ports appear to be standard background Windows services.
+- Filtered ports confirm that the firewall is actively blocking some traffic.
+- No unexpected or unnecessary Linux services were exposed.
+
+## Security Assessment Conclusion
+
+The Nmap scan confirms that the system’s network exposure is limited and controlled.
+Only essential Windows system services and the VM’s SSH port are visible, with the vast majority of ports securely closed. This reflects a low attack surface and aligns with best-practice security hardening for a virtualized lab environment.
+
+---
+
+## Task 3
