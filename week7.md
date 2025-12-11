@@ -352,3 +352,68 @@ The SSH security verification confirms that:
 
 This validates that SSH aligns with recommended security practices and supports a secure remote administration environment.
 
+---
+---
+
+## Task 4 — Access Control Verification
+
+This task checked whether user accounts, group memberships, and sudo privileges on the server follow secure access-control practices.
+
+### 1. User Identity
+
+Command:
+```bash
+id
+```
+
+The user sapana (UID 1000) is the main system account and belongs to expected groups such as sudo, adm, cdrom, dip, plugdev, and lxd.
+
+### 2. Sudo Group Verification
+
+Command:
+```bash
+grep -E "sudo|adm" /etc/group
+```
+**Result:**
+- Both *sapana* and *student* appear in the `sudo` group  
+- If student is not meant to be an admin, this is a security risk
+
+### 3. Home Directory Permissions
+
+Command:
+```bash
+ls -l /home
+```
+
+**Result:**
+- /home/sapana → secure (owner-only access)  
+- /home/student → secure permissions  
+-  No unauthorised access possible between users
+
+### 4. Sudo Privileges
+
+Command:
+```bash
+sudo -l
+```
+**Result**
+The user sapana is permitted to run all commands with elevated privileges, which is appropriate for the system administrator.
+Sudo operates with secure defaults such as env_reset, helping reduce risk.
+
+### 5. Summary
+
+- Correct users and groups are present
+- Sudo access for sapana is appropriate
+- Home directories are securely permissioned
+- Key Risk: The student account has sudo access — remove if not required
+- No unauthorised or unexpected user privileges detected beyond this
+
+### Evidence
+
+<img width="1287" height="805" alt="week7-access-control" src="https://github.com/user-attachments/assets/15938993-6b9d-43bc-a6c8-b3f59c7ce75f" />
+
+
+---
+---
+
+## Task 5: 
