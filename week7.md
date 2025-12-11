@@ -408,12 +408,96 @@ Sudo operates with secure defaults such as env_reset, helping reduce risk.
 - Key Risk: The student account has sudo access — remove if not required
 - No unauthorised or unexpected user privileges detected beyond this
 
-### Evidence
+**Evidence**
 
 <img width="1287" height="805" alt="week7-access-control" src="https://github.com/user-attachments/assets/15938993-6b9d-43bc-a6c8-b3f59c7ce75f" />
 
-
----
 ---
 
-## Task 5: 
+
+## Task 5 — Service Audit (Running Services & Justification)
+
+This task reviewed all active systemd services to ensure the system is running only necessary and secure components. The following commands were used:
+
+systemctl list-units --type=service --state=running
+systemctl --failed
+
+### 1. Summary of Findings
+- 23 active services detected
+- 0 failed services (system is stable)
+- All running services appear legitimate and required
+
+**Evidence**
+
+<img width="1285" height="804" alt="week7-service-audit" src="https://github.com/user-attachments/assets/a813d43b-49ae-48da-8704-535b493befc3" />
+
+---
+
+## 2. Analysis of Running Services
+
+### Essential System Services
+Core services needed for the operating system:
+- systemd-journald
+- systemd-logind
+- systemd-networkd
+- systemd-resolved
+- systemd-udevd
+- polkit
+
+Justification: These services support logging, networking, device handling, and session management. Disabling them would break essential system functions.
+
+---
+
+### 3. Networking Services
+- ssh.service — required for remote connection and coursework
+- networkd-dispatcher — handles network-related events
+- ModemManager — manages broadband interfaces
+
+Justification: All networking components are necessary for system connectivity, especially SSH.
+
+---
+
+### 4. Security & Update Services
+- fail2ban — protects against brute-force attacks
+- unattended-upgrades — automatically installs security updates
+
+Justification: These services improve security and directly supported the improved Lynis score.
+
+---
+
+### 5. User & Session Services
+- user@1000.service — manages the session for user 'sapana'
+- getty@tty1.service — provides the login terminal
+
+Justification: Both services are required for login and user session management.
+
+---
+
+### 6. Utility Services
+- cron — runs scheduled tasks
+- dbus — inter-process communication
+- iperf3 — used previously for Week 6 performance testing
+- udisks2 — disk and storage management
+- upower — handles system power management
+- multipathd — manages storage multipaths
+
+Justification: These services support routine system operations and are not security risks.
+
+---
+
+### 7. Failed Services Check
+```bash
+systemctl --failed
+```
+Result: No failed services detected.
+
+**Evidence**
+<img width="1284" height="807" alt="week7-service-failed" src="https://github.com/user-attachments/assets/4d9bfabf-8482-45fd-83a2-81e43bd5781b" />
+
+---
+
+## 8. Conclusion
+The service audit confirms the server is stable, correctly configured, and running only essential system components. No unnecessary or suspicious services were found, and key security services are active.
+
+---
+
