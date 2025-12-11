@@ -266,4 +266,84 @@ Only essential Windows system services and the VM’s SSH port are visible, with
 
 ---
 
-## Task 3
+## Task 3: SSH Security Verification
+
+This task focused on reviewing and validating the security configuration of the SSH service, ensuring it aligns with best-practice guidelines for secure remote access. Verification involved examining the SSH configuration file, checking service status, and confirming the installed SSH version.
+
+---
+
+### 1. Reviewing SSH Configuration (`sshd_config`)
+
+The SSH configuration file was inspected to ensure that unsafe options were disabled and essential security controls were active.
+
+Key verified settings:
+
+- **PermitRootLogin no** — root login is disabled, preventing high-risk authentication.
+- **PasswordAuthentication yes** — allowed for this local testing environment.
+- **X11Forwarding no** — disables forwarding to reduce attack surface.
+- **UsePAM yes** — ensures proper authentication management.
+- **Subsystem sftp /usr/lib/openssh/sftp-server** — confirms SFTP support.
+- Several optional insecure features remain **commented out**, keeping them disabled.
+
+These settings collectively help limit exposure to unnecessary attack vectors.
+
+---
+
+### 2. Checking SSH Service Status
+
+The SSH daemon status was inspected using:
+
+```bash
+sudo systemctl status ssh
+```
+
+**Verification confirmed:**
+
+- Service is active and running
+- Correctly loaded from `/usr/lib/systemd/system/ssh.service`
+- SSH listens on the expected port (22)
+- No warnings or failures were reported
+
+A running and stable SSH service ensures reliable remote connectivity.
+
+---
+
+### 3. Confirming Installed SSH Version
+
+The installed SSH version was retrieved using:
+
+```bash
+ssh -V
+```
+
+**Result:**
+
+- OpenSSH_9.6p1 Ubuntu-3ubuntu13.14
+- OpenSSL 3.0.13 (2024)
+
+This reflects a modern, up-to-date installation, reducing vulnerabilities associated with outdated cryptographic libraries.
+
+---
+
+**Evidence**
+
+The combined screenshot displays:
+- The inspected `sshd_config` file  
+- SSH service status  
+- SSH version output  
+
+<img width="1284" height="805" alt="week7-ssh-verification" src="https://github.com/user-attachments/assets/dd8a9d7f-ed4a-4e22-a876-4282b1af1721" />
+
+---
+
+### 5. Summary
+
+The SSH security verification confirms that:
+
+- Root login is disabled  
+- Essential hardening options are correctly configured  
+- SSH service is healthy and running  
+- A recent, secure version of OpenSSH is installed  
+
+This validates that SSH aligns with recommended security practices and supports a secure remote administration environment.
+
