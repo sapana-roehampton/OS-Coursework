@@ -418,18 +418,21 @@ Sudo operates with secure defaults such as env_reset, helping reduce risk.
 ## Task 5 — Service Audit (Running Services & Justification)
 
 This task reviewed all active systemd services to ensure the system is running only necessary and secure components. The following commands were used:
-
+```
 systemctl list-units --type=service --state=running
 systemctl --failed
+```
+
+**Evidence**
+
+<img width="1285" height="804" alt="week7-service-audit" src="https://github.com/user-attachments/assets/5f9aa761-852c-43f4-986b-63b971f0d7d5" />
+
+---
 
 ### 1. Summary of Findings
 - 23 active services detected
 - 0 failed services (system is stable)
 - All running services appear legitimate and required
-
-**Evidence**
-
-<img width="1285" height="804" alt="week7-service-audit" src="https://github.com/user-attachments/assets/a813d43b-49ae-48da-8704-535b493befc3" />
 
 ---
 
@@ -448,7 +451,7 @@ Justification: These services support logging, networking, device handling, and 
 
 ---
 
-### 3. Networking Services
+### 2.1 Networking Services
 - ssh.service — required for remote connection and coursework
 - networkd-dispatcher — handles network-related events
 - ModemManager — manages broadband interfaces
@@ -457,7 +460,7 @@ Justification: All networking components are necessary for system connectivity, 
 
 ---
 
-### 4. Security & Update Services
+### 2.2 Security & Update Services
 - fail2ban — protects against brute-force attacks
 - unattended-upgrades — automatically installs security updates
 
@@ -465,7 +468,7 @@ Justification: These services improve security and directly supported the improv
 
 ---
 
-### 5. User & Session Services
+### 2.3 User & Session Services
 - user@1000.service — manages the session for user 'sapana'
 - getty@tty1.service — provides the login terminal
 
@@ -473,7 +476,7 @@ Justification: Both services are required for login and user session management.
 
 ---
 
-### 6. Utility Services
+### 2.4 Utility Services
 - cron — runs scheduled tasks
 - dbus — inter-process communication
 - iperf3 — used previously for Week 6 performance testing
@@ -485,7 +488,7 @@ Justification: These services support routine system operations and are not secu
 
 ---
 
-### 7. Failed Services Check
+### 3. Failed Services Check
 ```bash
 systemctl --failed
 ```
@@ -496,7 +499,7 @@ Result: No failed services detected.
 
 ---
 
-## 8. Conclusion
+## 4. Conclusion
 The service audit confirms the server is stable, correctly configured, and running only essential system components. No unnecessary or suspicious services were found, and key security services are active.
 
 ---
