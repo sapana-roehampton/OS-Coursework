@@ -127,13 +127,13 @@ These bottlenecks guided the optimisation steps implemented later.
 
 **CPU Bottleneck**
 
-During the stress test, CPU usage reached 100% across available cores.
+1. During the stress test, CPU usage reached 100% across available cores.
 
-The process stress used ~47% per core.
+2. The process stress used ~47% per core.
 
-System responsiveness slowed.
+3. System responsiveness slowed.
 
-Load average increased significantly.
+4. Load average increased significantly.
 
 **Conclusion:**
 This is expected under artificial load. CPU becomes the limiting factor, confirming the system behaves correctly under pressure.
@@ -141,15 +141,15 @@ This is expected under artificial load. CPU becomes the limiting factor, confirm
 
 **Memory Behaviour**
 
-Memory usage increased from 418 MiB → 479 MiB during the test.
+1. Memory usage increased from 418 MiB → 479 MiB during the test.
 
 However:
 
-No swapping occurred
+- No swapping occurred
 
-Swap space remained fully available
+- Swap space remained fully available
 
-RAM usage stayed within safe limits
+- RAM usage stayed within safe limits
 
 **Conclusion:**
 No memory shortage, but swappiness tuning can improve reaction time under future load.
@@ -157,13 +157,13 @@ No memory shortage, but swappiness tuning can improve reaction time under future
 
 **Disk I/O Bottleneck**
 
-Disk usage did not change, but the read-ahead value was only 256 KB, which is low for performance.
+1. Disk usage did not change, but the read-ahead value was only 256 KB, which is low for performance.
 
 Impacts:
 
-Slower sequential reads
+- Slower sequential reads
 
-Higher disk latency under file operations
+- Higher disk latency under file operations
 
 **Conclusion:**
 Increasing read-ahead improves disk throughput.
