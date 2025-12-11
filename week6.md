@@ -318,10 +318,23 @@ sudo blockdev --getra /dev/sda
 
 #  9. Performance Visualisations (Graph Data)
 
-Placeholders:
 
-`![CPU Chart](images/week6-cpu-chart.png)`  
-`![Memory Chart](images/week6-memory-chart.png)`  
+[CPU Usage Chart]
+<img width="600" height="371" alt="week6-CPU-usage" src="https://github.com/user-attachments/assets/32b7f014-18fe-4410-8621-b31271947c7c" />
+
+---
+
+[Memory Usage Chart]  
+<img width="600" height="371" alt="week6-memory-usage" src="https://github.com/user-attachments/assets/3bafe5e7-b609-4684-9534-02ddbfe3b806" />
+
+---
+
+[Disk Optimisation Chart]
+<img width="600" height="371" alt="week6-disk-optimisation" src="https://github.com/user-attachments/assets/4e56d54a-0c78-4b74-aa84-49edb4448b47" />
+
+---
+
+[SSH Response Time Chart]
 
 ---
 
