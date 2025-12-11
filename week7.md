@@ -504,3 +504,117 @@ The service audit confirms the server is stable, correctly configured, and runni
 
 ---
 
+
+## [Task 6 — System Configuration Review & Remaining Risk Assessment]
+
+This final task reviews the overall system configuration after applying all Week 7 security improvements. The goal is to confirm that the system is securely configured and identify any remaining risks.
+
+---
+
+## 1. SSH Configuration Review
+
+The SSH configuration (`/etc/ssh/sshd_config`) was checked after hardening. Key secure settings now in place:
+
+- Root login disabled (`PermitRootLogin no`)
+- X11 forwarding disabled
+- SFTP subsystem enabled
+- SSH service running normally (verified with `systemctl status ssh`)
+
+These settings reduce unnecessary attack surfaces and follow recommended best practices for a lab VM.
+
+---
+
+## 2. Firewall Review
+
+UFW firewall settings were confirmed using `sudo ufw status`.
+
+- Firewall is **enabled**
+- Only **OpenSSH** is allowed
+- No unnecessary ports exposed
+
+This ensures minimal external exposure.
+
+---
+
+## 3. System Updates & Patch Management
+
+Automatic security updates were enabled using `unattended-upgrades`.
+
+- System now downloads and installs security patches automatically
+- Reduces long-term vulnerabilities caused by outdated software
+
+---
+
+## 4. Malware Protection
+
+The malware scanner **rkhunter** was installed and updated.
+
+- Previously missing malware scanner warning in Lynis is now resolved
+- Provides basic rootkit detection for the VM
+
+---
+
+## 5. Network Exposure (Nmap Results)
+
+An Nmap scan was performed from the host machine:
+
+```powershell
+nmap -sV -p- localhost -Pn
+```
+
+Findings:
+
+- Only expected ports detected (SSH + host OS services)
+- No unauthorised or suspicious services found
+- Confirms the VM presents a low attack surface
+
+---
+
+## 6. Service Audit Summary
+
+- **23 active services**
+- **0 failed services**
+
+This indicates a stable and correctly configured system environment.
+
+---
+
+## 7. Remaining Risks & Improvement Suggestions
+
+### Remaining Risks
+- Password-based SSH authentication still in use  
+- No advanced integrity monitoring (e.g., AIDE)  
+- Host OS (Windows) exposes additional ports detected by Nmap  
+- Logging is only local (no remote log server)
+
+### Future Improvements
+- Switch to SSH key authentication  
+- Install AIDE for file integrity monitoring  
+- Harden/disable extra host OS services if needed  
+- Add additional fail2ban rules  
+
+---
+
+## 8. Final Evaluation
+
+After audits and hardening, the system is now:
+
+- More secure  
+- Properly configured  
+- Free of failed services  
+- Running with a reduced attack surface  
+
+---
+
+## Final Reflection On Week 7
+
+Week 7 was the most intense and detailed part of the project, but it helped me understand how real security assessments are done on a Linux system. Every tool used—Lynis, Nmap, and various system auditing commands—showed me how many small configuration issues can affect the overall security posture. Running the baseline Lynis scan, applying remediations, and then comparing the before/after results made the hardening process feel structured and meaningful.
+
+Performing the Nmap scan from Windows also showed how exposed services can be discovered by external systems, which helped me understand why service management and firewall rules are so important. The SSH verification steps gave me confidence in checking authentication settings, active daemons, and protocol versions.
+
+The access control review, service audit, and configuration evaluation helped me think more critically about what should and should not run on a server. I learned how to justify services instead of just listing them, which is something real system administrators must do.
+
+Overall, this week strengthened my understanding of secure system administration. I now feel more confident identifying weaknesses, applying fixes, and documenting the whole process in a professional way.
+
+---
+
