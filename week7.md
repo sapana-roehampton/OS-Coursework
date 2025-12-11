@@ -1,6 +1,6 @@
 # Week 7 – Security Audit and System Evaluation  
 
-## Task 1: Lynis Security Audit (Before & After Remediation)
+## [Task 1: Lynis Security Audit (Before & After Remediation)]
 
 ## 1. Introduction
 
@@ -202,7 +202,7 @@ The system now demonstrates a stronger security posture and aligns more closely 
 ---
 ---
 
-## Task 2: Network Security Assessment
+## [Task 2: Network Security Assessment]
 
 ## Installing Nmap (Host Machine)
 
@@ -267,7 +267,7 @@ Only essential Windows system services and the VM’s SSH port are visible, with
 ---
 ---
 
-## Task 3: SSH Security Verification
+## [Task 3: SSH Security Verification]
 
 This task focused on reviewing and validating the security configuration of the SSH service, ensuring it aligns with best-practice guidelines for secure remote access. Verification involved examining the SSH configuration file, checking service status, and confirming the installed SSH version.
 
@@ -353,9 +353,9 @@ The SSH security verification confirms that:
 This validates that SSH aligns with recommended security practices and supports a secure remote administration environment.
 
 ---
----
 
-## Task 4 — Access Control Verification
+
+## [Task 4 — Access Control Verification]
 
 This task checked whether user accounts, group memberships, and sudo privileges on the server follow secure access-control practices.
 
@@ -415,7 +415,7 @@ Sudo operates with secure defaults such as env_reset, helping reduce risk.
 ---
 
 
-## Task 5 — Service Audit (Running Services & Justification)
+## [Task 5 — Service Audit (Running Services & Justification)]
 
 This task reviewed all active systemd services to ensure the system is running only necessary and secure components. The following commands were used:
 ```
