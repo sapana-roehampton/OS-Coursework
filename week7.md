@@ -55,6 +55,7 @@ sudo lynis audit system
 
 **SSH Configuration:** Weak. Several SSH settings required hardening.
 
+
 ### Initial Recommendations
 
 Lynis highlighted important changes needed for better security:
