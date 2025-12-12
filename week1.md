@@ -14,6 +14,8 @@ This week focused on setting up the server environment required for the Operatin
 
 ## 2. System Architecture Diagram
 
+This diagram represents the system architecture implemented for this project. The Ubuntu Server 24.04 LTS runs as a headless virtual machine inside VirtualBox and is accessed securely from the Windows workstation using SSH over a NAT network.
+
 The following diagram represents the setup I created for Week 1.
 
 **System Architecture Diagram**
