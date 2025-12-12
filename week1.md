@@ -15,20 +15,11 @@ This week focused on setting up the server environment required for the Operatin
 ## 2. System Architecture Diagram
 
 The following diagram represents the setup I created for Week 1.
-```
-+--------------------------------------------------------------+
-|                     Windows 11 Laptop                        |
-|            (Workstation with SSH client installed)           |
-+------------------------------+-------------------------------+
-                               |
-                               |  VirtualBox Virtual Network
-                               |  (NAT + internal connectivity)
-                               |
-+------------------------------v-------------------------------+
-|                     Ubuntu Server 24.04 LTS VM               |
-|       Headless server accessed via terminal & SSH            |
-+--------------------------------------------------------------+
-```
+
+**System Architecture Diagram**
+
+<img width="2013" height="363" alt="week1-system-architecture" src="https://github.com/user-attachments/assets/630ded1a-10c9-41ee-ad51-117a15245b32" />
+
 ---
 
 ## 3. Distribution Selection Justification
