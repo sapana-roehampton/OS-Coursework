@@ -18,7 +18,7 @@ The following diagram represents the setup I created for Week 1.
 
 **System Architecture Diagram**
 
-<img width="2013" height="363" alt="week1-system-architecture" src="https://github.com/user-attachments/assets/630ded1a-10c9-41ee-ad51-117a15245b32" />
+<img width="700" alt="week1-system-architecture" src="https://github.com/user-attachments/assets/630ded1a-10c9-41ee-ad51-117a15245b32" />
 
 ---
 
