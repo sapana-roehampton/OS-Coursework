@@ -9,21 +9,21 @@
 
 # 1. Introduction
 
-Week 5 focused on implementing advanced Linux security mechanisms and creating automation tools for verifying and monitoring server security. The main tasks were:
+Week 5 emphasize specially on applying sophisticated Linux security techniques and developing automation utilities to check and oversee server security. The primary activities involved were:
 
 - Enforcing mandatory access control (AppArmor)
 - Configuring automatic security updates
 - Implementing Fail2Ban intrusion detection
-- Creating a **security baseline script** to verify system hardening
-- Creating a **remote monitoring script** to collect server performance metrics from the workstation
+- Creating a security baseline script to verify system hardening
+- Creating a remote monitoring script to collect server performance metrics from the workstation
 
-These security practices strengthen system resilience and provide real-world experience in Linux administration and automation.
+These safeguarding methods strengthen system durability, Offer practical exposure, in Linux management and automation and provide real world experience.
 
 ---
 
 # 2. AppArmor – Access Control Enforcement
 
-AppArmor is enabled on the server and has been checked to confirm it’s working correctly. It helps protect important applications by limiting what they’re allowed to access on the system, beyond normal Linux permissions. This reduces the impact of any potential adjustments and helps to keep the server protected.
+AppArmor was activated on the server. Verified to ensure it was functioning correctly. It restricts the access applications have within the system beyond Linux permissions assisting in minimizing potential problems and maintaining the servers security.
 
 **Evidence – AppArmor Status**
 
@@ -33,14 +33,14 @@ AppArmor is enabled on the server and has been checked to confirm it’s working
 The screenshot confirms that:
 - AppArmor is **active**
 - Profiles are in **enforce** mode  
-This ensures that the system processes is perfectly being protected by AppArmor.
+This make sure that the system processes is perfectly being protected by AppArmor.
 
 ---
 
 # 3. Automatic Security Updates
 
-The unattended-upgrades service was set up to automatically install security updates.  
-This ensures that the server remains protected without requiring manual administrator action.
+The unattended-upgrades service was set up to automatically install security updates.
+This guarantees the server stays secure without the need for input, from an administrator..
 
 ### Commands Used:
 ```
@@ -59,7 +59,7 @@ Evidence 1: Installation
 Evidence 2: Update configuration dialog
 <img width="1288" height="818" alt="week5-auto-updates-config" src="https://github.com/user-attachments/assets/3bb1cff5-7c4e-4a38-9628-a03281766d56" />
 
-The screenshot confirms that:
+The evidence verifies that:
 - Automatic updates are **enabled**
 - The service is **running**
 
@@ -69,7 +69,7 @@ The screenshot confirms that:
 
 Fail2Ban was installed inorder to protect the SSH service from brute-force login attempts.
 
-### Commands Used:
+### Commands Executed:
 
 ```
  sudo apt install fail2ban -y
@@ -154,7 +154,7 @@ echo "===== CHECK COMPLETE ====="
 
 # 6. Remote Monitoring Script (monitor-server.sh)
 
-This script runs on the workstation and it connects to the server via SSH, and extracts live performance metrics.
+The script operates on the workstation establishing an SSH connection, to the server to retrieve real-time performance data.
 
 #!/bin/bash
 
@@ -214,10 +214,11 @@ Top processes consuming CPU
 
 # 7. Reflection
 
-Week 5 was mainly about working with server security tools. I did not just read about them, I actually installed and checked how they work on my server.
+The focus of Week 5 was primarily, on utilizing server security tools. I personally set them up. Tested their functionality on my server.
 
-I used AppArmor, unattended-upgrades, and Fail2Ban. AppArmor controls what services are allowed to access. Unattended-upgrades handles security updates automatically. Fail2Ban protects SSH when there are repeated failed login attempts.
-I also created a security baseline script. This helped me check security settings quickly instead of running commands one by one. I wrote a monitoring script as well, which I used to collect basic system information over SSH.
+I employed AppArmor, unattended-upgrades and Fail2Ban. AppArmor governs which services have access permissions. Unattended-upgrades manages security updates without intervention. Fail2Ban safeguards SSH against unsuccessful login tries.
+
+I additionally developed a security baseline script. This enabled me to verify security configurations rather than executing commands individually. I also authored a monitoring script, which I utilized to gather system data via SSH.
 
 This week helped me get more comfortable managing and securing a Linux server.
 
