@@ -1,4 +1,4 @@
-## 🔗 Quick Navigation  
+## Quick Navigation  
 [Week 1](week1.md) | [Week 2](week2.md) | [Week 3](week3.md) | [Week 4](week4.md) | [Week 5](week5.md) | [Week 6](week6.md) | [Week 7](week7.md)
 
 ---
@@ -19,11 +19,11 @@
 
 All installations will be performed remotely over SSH from my workstation.
 
-CPU and Memory Testing Tool:
+CPU and Memory Tester:
 sudo apt install stress-ng -y
 
-Disk I/O Testing Tool:
-(No installation required, I will use the built-in 'dd' command)
+Disk I/O Tester:
+(No installation required, I will be using the built-in 'dd' command)
 
 Network Performance Tool:
 sudo apt install iperf3 -y
