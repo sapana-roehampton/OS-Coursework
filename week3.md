@@ -23,7 +23,7 @@ CPU and Memory Tester:
 sudo apt install stress-ng -y
 
 Disk I/O Tester:
-(No installation required, I will be using the built-in 'dd' command)
+(No new installation required, I will be using the built-in 'dd' command)
 
 Network Performance Tool:
 sudo apt install iperf3 -y
@@ -41,7 +41,7 @@ stress-ng (memory test):
 Expected to allocate large blocks of RAM until the memory limit is reached.
 
 dd command (Disk I/O):
-Expected to use high disk write throughput and increase I/O wait time.
+Expected to consume high disk write throughput and rise I/O wait time.
 
 iperf3 (Network test):
 Expected to generate high network bandwidth usage between server and client.
