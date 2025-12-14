@@ -23,24 +23,24 @@ These security practices strengthen system resilience and provide real-world exp
 
 # 2. AppArmor – Access Control Enforcement
 
-AppArmor was verified to ensure mandatory access control (MAC) is enforced on the server.  
-This protects key applications by restricting their access beyond standard Linux permissions.
+AppArmor is enabled on the server and has been checked to confirm it’s working correctly. It helps protect important applications by limiting what they’re allowed to access on the system, beyond normal Linux permissions. This reduces the impact of any potential adjustments and helps to keep the server protected.
 
-###  **Evidence – AppArmor Status**
+**Evidence – AppArmor Status**
+
 ![AppArmor Status](images/week5-apparmor-status.png)
 <img width="1286" height="807" alt="week5-apparmor-status" src="https://github.com/user-attachments/assets/86f15c82-a730-4aa0-ac84-acc70a9a517d" />
 
-The screenshot confirms:
+The screenshot confirms that:
 - AppArmor is **active**
 - Profiles are in **enforce** mode  
-This means AppArmor is correctly protecting system processes.
+This ensures that the system processes is perfectly being protected by AppArmor.
 
 ---
 
 # 3. Automatic Security Updates
 
-The unattended-upgrades service was configured to automatically install security updates.  
-This ensures the server remains protected without requiring manual administrator action.
+The unattended-upgrades service was set up to automatically install security updates.  
+This ensures that the server remains protected without requiring manual administrator action.
 
 ### Commands Used:
 ```
@@ -50,7 +50,7 @@ This ensures the server remains protected without requiring manual administrator
 
 ```
 
-###  **Evidence – Automatic Updates Enabled**
+**Evidence – Automatic Updates Enabled**
 ![Unattended Upgrades](images/week5-unattended-upgrades.png)
 
 Evidence 1: Installation
@@ -67,7 +67,7 @@ The screenshot confirms that:
 
 # 4. Fail2Ban – Intrusion Detection & Mitigation
 
-Fail2Ban was installed to protect the SSH service from brute-force login attempts.
+Fail2Ban was installed inorder to protect the SSH service from brute-force login attempts.
 
 ### Commands Used:
 
@@ -102,7 +102,7 @@ The screenshot confirms:
 
 # 5. Security Baseline Script (security-baseline.sh)
 
-This script automatically checks the most important security controls implemented in Week 4 and Week 5.
+The script below significantly checks the most important security controls applied in fourth and fifth week.
 
 ###  **What the Script Verifies**
 - UFW firewall status  
@@ -154,7 +154,7 @@ echo "===== CHECK COMPLETE ====="
 
 # 6. Remote Monitoring Script (monitor-server.sh)
 
-This script runs on the workstation, connects to the server via SSH, and extracts live performance metrics.
+This script runs on the workstation and it connects to the server via SSH, and extracts live performance metrics.
 
 #!/bin/bash
 
@@ -214,9 +214,10 @@ Top processes consuming CPU
 
 # 7. Reflection
 
-Week 5 significantly improved my understanding of practical server security.
-AppArmor strengthened access control, unattended-upgrades automated essential patching, and Fail2Ban protected SSH from repeated login attempts.
+Week 5 was mainly about working with server security tools. I did not just read about them, I actually installed and checked how they work on my server.
 
-Writing the security baseline script taught me how to automate auditing tasks, and the monitoring script gave me real experience retrieving system performance data through SSH.
+I used AppArmor, unattended-upgrades, and Fail2Ban. AppArmor controls what services are allowed to access. Unattended-upgrades handles security updates automatically. Fail2Ban protects SSH when there are repeated failed login attempts.
+I also created a security baseline script. This helped me check security settings quickly instead of running commands one by one. I wrote a monitoring script as well, which I used to collect basic system information over SSH.
 
-This week closely simulated real DevOps and system administration workflows, improving both my technical and professional skills.
+This week helped me get more comfortable managing and securing a Linux server.
+
