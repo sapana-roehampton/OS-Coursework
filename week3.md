@@ -6,7 +6,7 @@
 
 ## 1. Application Selection Matrix
 
-| Workload Type        | Application | JUstification for Use                                                       |
+| Workload Type        | Application | Reasons for Use                                                       |
 |----------------------|-------------|-----------------------------------------------------------------------------|
 | CPU-intensive        | stress-ng   | Selected to deliberately push CPU utilisation to maximum levels for analysis.|
 | RAM-intensive        | stress-ng   | Allows controlled memory stress to check RAM usage and behavior.            |
@@ -17,7 +17,7 @@
 
 ## 2. Installation Documentation (SSH Commands)
 
-All installations will be performed remotely over SSH from my workstation.
+All of the installations will be performed remotely over SSH from my workstation.
 
 CPU and Memory Tester:
 sudo apt install stress-ng -y
