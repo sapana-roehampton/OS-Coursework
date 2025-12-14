@@ -6,11 +6,11 @@
 
 ## 1. Application Selection Matrix
 
-| Workload Type        | Application | Reason for Selection                                                        |
+| Workload Type        | Application | JUstification for Use                                                       |
 |----------------------|-------------|-----------------------------------------------------------------------------|
-| CPU-intensive        | stress-ng   | Generates high CPU load and is widely used for performance testing.         |
+| CPU-intensive        | stress-ng   | Selected to deliberately push CPU utilisation to maximum levels for analysis.|
 | RAM-intensive        | stress-ng   | Allows controlled memory stress to check RAM usage and behavior.            |
-| Disk I/O-intensive   | dd command  | Simple built-in Linux tool to test disk read/write performance.             |
+| Disk I/O-intensive   | dd          | A built-in Linux utility suitable for creating continuous disk read and write operations.            |
 | Network-intensive    | iperf3      | Measures network throughput and latency accurately.                         |
 | Server application   | Apache2     | Common server application used to analyze response time and resource usage. |
 
@@ -35,13 +35,13 @@ sudo apt install apache2 -y
 ## 3. Expected Resource Profiles
 
 stress-ng (CPU test):
-Expected to use 90–100% of available CPU depending on settings.
+Expected to use 90–100% of available CPU because of its present configuration settings.
 
 stress-ng (memory test):
-Expected to allocate large blocks of RAM until the memory limit is reached.
+The system requires large block of RAM sections to be reserved until it reaches its maximum memory capacity.
 
 dd command (Disk I/O):
-Expected to consume high disk write throughput and rise I/O wait time.
+The system requires high disk write throughput while it will produces longer I/O wait times.
 
 iperf3 (Network test):
 Expected to generate high network bandwidth usage between server and client.
