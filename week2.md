@@ -8,7 +8,7 @@
 
 ## Performance Testing Plan
 
-This week focuses on assessing how my Ubuntu performs under workloads in the week 6. In week 2, I am only creating the strategy, for performance assessment without running any tests. I will connect to my server remotely via SSH from my workstation (Windows laptop). This mimics the technique system administrators utilize to oversee servers.
+This week focuses on assessing how my Ubuntu performs under workloads in the week 6. In week 2, I am only creating the strategy, for performance assessment without running any of thee tests. I will connect to my server remotely via SSH from my windows laptop- workstation. This mimics the technique system administrators utilize to oversee servers.
 
 ### 1.1 Tools I intend to utilize
 
@@ -55,7 +55,7 @@ This list details the security settings I plan to implement on my Ubuntu Server 
 - Edit SSH configuration file /etc/ssh/sshd_config safely 
 - Allow SSH access only from my workstation's IP address
 
-### 2.2 Firewall Configuration
+### 2.2 Setting Up a Firewall
 
 - Enable ufw (Uncomplicated Firewall) on the server  
 - Allow **SSH only** from my workstation IP address  
@@ -71,7 +71,7 @@ This list details the security settings I plan to implement on my Ubuntu Server 
 
 ### 2.4 Automatic Updates
 
-- Install and configure unattended-upgrades  
+- Install and setup unattended-upgrades  
 - Enable automatic security updates  
 - Verify and confirm that configuration files are accurate and upgrade logs are being generated 
 
@@ -169,7 +169,5 @@ This threat model enables me to identify the risks pertinent, to my small virtua
 
 ## Reflection:
 
-In Week 2, I realized the significance of planning prior to implementing any security modifications on a server. Than immediately adjusting tools like SSH or firewalls I concentrated on grasping the reasons, behind these controls and how they integrate to safeguard a system. Building the security checklist allowed me to understand how various security layers (SSH, firewall, AppArmor updates, user management) link together to establish a baseline. Creating the threat model also prompted me to think from an attacker’s perspective and spot vulnerabilities before they escalate into issues. This week improved my understanding of security principles and prepared me for the hands-on configuration work in later weeks.
-
----
+In Week 2, I realized the significance of planning prior to implementing any security modifications on a server. Than immediately adjusting tools like SSH or firewalls I concentrated on grasping the reasons, behind these controls and how they integrate to safeguard a system. I was able to comprehend how different security layers (SSH, firewall, AppArmor updates, user management) connect to create a baseline by creating the security checklist. Developing the threat model also forced me to consider the viewpoint of an attacker and identify weaknesses before they become problems. I gained a better understanding of security concepts this week, which also helped me get ready for the practical configuration work in the coming weeks.
    
