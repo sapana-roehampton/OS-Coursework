@@ -1,3 +1,7 @@
+## Quick Navigation  
+[Week 1](week1.md) | [Week 2](week2.md) | [Week 3](week3.md) | [Week 4](week4.md) | [Week 5](week5.md) | [Week 6](week6.md) | [Week 7](week7.md)
+---
+
 #  Week 6 — Performance Evaluation & System Optimisation
 
 This week focuses on analysing system performance under different workloads, identifying bottlenecks, and applying optimisations to improve responsiveness and stability. All tests were performed on my Ubuntu VirtualBox server (`sapana-server`) using SSH access from my Windows host machine.
