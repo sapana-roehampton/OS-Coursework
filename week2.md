@@ -8,9 +8,9 @@
 
 ## Performance Testing Plan
 
-This week will involve evaluating how my Ubuntu operates under workloads during week six. In week 2. I am solely designing the approach, for performance measurement without executing any tests. I will access my server remotely through SSH from my workstation (Windows laptop). This simulates the method system administrators use to manage servers.
+This week focuses on assessing how my Ubuntu performs under workloads in the week 6. In week 2, I am only creating the strategy, for performance assessment without running any tests. I will connect to my server remotely via SSH from my workstation (Windows laptop). This mimics the technique system administrators utilize to oversee servers.
 
-### 1.1 Tools I plan to use
+### 1.1 Tools I intend to utilize
 
 From the workstation (using SSH):
 
@@ -21,11 +21,11 @@ From the workstation (using SSH):
 -  iostat  – to measure disk I/O performance during heavy workloads  
 -  ping  – to measure basic network latency  
 
-Later, if needed, I may also use more advanced tools such as iperf3 for network throughput testing or stress-ng for generating regulated load.
+If necessary in the future I might also utilize sophisticated utilities, like iperf3 to assess network throughput or stress-ng to create controlled load.
 
 ### 1.2 Metrics I will monitor
 
-For every application that I test in Week 6, I plan to record:
+For each application that I evaluate in Week 6, I intend to document:
 
 - **CPU utilization** – overall CPU % and which processes consuming the highest resources 
 - **Memory usage** – total used, free and cached memory  
@@ -42,16 +42,16 @@ For each workload I will:
 2. Start the application or service from the workstation using SSH.  
 3. Use the monitoring tools  during the execution of the workload.  
 4. Save the results in a small table (CPU, memory, disk, network).  
-5. Pause the workload and Verify whether the system reverts to its regular state.
+5. Halt the workload and Verify whether the system reverts to its original state.
 
 ## 2. Security Configuration Checklist
 
-This checklist outlines the security configurations I intend to apply to my Ubuntu Server in Weeks 4 and 5. I will use this as a checklist later to ensure that everything is configured correctly.
+This list details the security settings I plan to implement on my Ubuntu Server during Weeks 4 and 5. I will refer to this list later to verify that all configurations are properly set.
 
 ### 2.1 SSH Hardening
 
 - Disable direct root login over SSH  
-- Disable password-based SSH authentication and use **key-based authentication** only  
+- Disable password-based SSH authentication and use key-based authentication instead
 - Edit SSH configuration file /etc/ssh/sshd_config safely 
 - Allow SSH access only from my workstation's IP address
 
