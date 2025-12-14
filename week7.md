@@ -26,7 +26,7 @@ sudo apt install lynis -y
 
 <img width="1285" height="791" alt="week7-lynis-install" src="https://github.com/user-attachments/assets/7a9cef40-9d01-477a-ade0-2e3402faa1e9" />
 
-Once installation completed, the tool was ready for a full system audit.
+After the installation finished the tool was prepared for a system examination.
 
 ---
 
@@ -113,7 +113,7 @@ sudo apt install unattended-upgrades -y
 sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
 
-Choosing **Yes** at the prompt enabled automatic update functionality.
+Choosing Yes at the prompt enabled automatic update functionality.
 
 **Evidence**
 
