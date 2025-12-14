@@ -1,10 +1,10 @@
-## 🔗 Quick Navigation  
+## Quick Navigation:   
 [Week 1](week1.md) | [Week 2](week2.md) | [Week 3](week3.md) | [Week 4](week4.md) | [Week 5](week5.md) | [Week 6](week6.md) | [Week 7](week7.md)
 
 ---
 
 
-# Week 2 - Security Planning & Testing Methodology
+# Week 2 - Methodology for Security Planning and Testing
 
 ## Performance Testing Plan
 
@@ -148,20 +148,20 @@ Full control over the system, ability to disable security settings, install root
 
 ---
 
-### Threat 4 – Out-of-date packages and vulnerabilities
+### Threat 4 – vulnerabilities and Outdated packages
 
 **Description:**  
-If the operating system or installed software is not updated, known security vulnerabilities may be left unpatched.
+It is possible for known security faws to remain unpatched if if the operating system or installed software is not updated.
 
 **Impact:**  
-Attackers might take advantage of security flaws to infiltrate systems or cause service disruptions.
+Attackers may exploit security holes to gain access to systems or interfere with services causing disruptions.
 
 **Mitigations:**
 
-- Configure unattended-upgrades for automatic security updates  
-- Run sudo apt update && sudo apt upgrade regularly  
-- Reboot the server when required after kernel or major package upgrades  
-- Periodically review apt logs to confirm that updates are being applied
+- Set up unattended-upgrades to receive security updates automatically.
+- Regularly run sudo apt update and sudo apt upgrade.
+- Reboot the server when required after kernel or major package upgrades.  
+- Periodically review apt logs to confirm that updates are being applied.
 
 ---
 
