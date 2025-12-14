@@ -8,8 +8,7 @@
 
 ## Performance Testing Plan
 
-This will be the testing of how my Ubuntu performs under different workloads for week six. In week 2 I am only planning how I will measure the performance, not running the tests yet. I will 
-connect to my server remotely using SSH from my workstation( Windows laptop). This matches how system administrators normally work with servers.
+This week will involve evaluating how my Ubuntu operates under workloads during week six. In week 2. I am solely designing the approach, for performance measurement without executing any tests. I will access my server remotely through SSH from my workstation (Windows laptop). This simulates the method system administrators use to manage servers.
 
 ### 1.1 Tools I plan to use
 
@@ -21,34 +20,33 @@ From the workstation (using SSH):
 -  vmstat  – to monitor CPU, memory and I/O statistics together  
 -  iostat  – to measure disk I/O performance during heavy workloads  
 -  ping  – to measure basic network latency  
--  curl or wget  – to test response times from services running on the server  
 
-Later, if needed, I may also use more advanced tools such as iperf3 for network throughput testing or stress-ng for generating controlled load.
+Later, if needed, I may also use more advanced tools such as iperf3 for network throughput testing or stress-ng for generating regulated load.
 
 ### 1.2 Metrics I will monitor
 
-For each application that I test in Week 6, I plan to record:
+For every application that I test in Week 6, I plan to record:
 
-- **CPU usage** – overall CPU % and which processes use the most  
+- **CPU utilization** – overall CPU % and which processes consuming the highest resources 
 - **Memory usage** – total used, free and cached memory  
 - **Disk I/O** – read/write throughput and I/O wait time  
 - **Network performance** – latency (ping) and throughput (amount of data sent/received)  
 - **System load** – using uptime or top to see the load average  
-- **Service behaviour** – for server applications, I will note response times and if any errors appear
+- **Service behaviour** – for server applications, I will note response times and  check if any errors appears
 
 ### 1.3 Testing approach
 
 For each workload I will:
 
-1. Record a **baseline** (no extra applications running).  
+1. Record a baseline.  
 2. Start the application or service from the workstation using SSH.  
-3. Use the monitoring tools above while the workload is running.  
+3. Use the monitoring tools  during the execution of the workload.  
 4. Save the results in a small table (CPU, memory, disk, network).  
-5. Stop the workload and check whether the system returns to normal.
+5. Pause the workload and Verify whether the system reverts to its regular state.
 
 ## 2. Security Configuration Checklist
 
-This checklist describes the security settings I plan to implement on my Ubuntu Server in Weeks 4 and 5. I will use this as a checklist later to verify that everything is configured correctly.
+This checklist outlines the security configurations I intend to apply to my Ubuntu Server in Weeks 4 and 5. I will use this as a checklist later to ensure that everything is configured correctly.
 
 ### 2.1 SSH Hardening
 
@@ -67,49 +65,49 @@ This checklist describes the security settings I plan to implement on my Ubuntu 
 ### 2.3 Mandatory Access Control (MAC)
 
 - Use **AppArmor** (Ubuntu’s default MAC system)  
-- Check which AppArmor profiles are loaded and enforced  
-- Ensure that key services (e.g. SSH, any future web service) have appropriate AppArmor profiles  
+- Verify which AppArmor profiles are currently active/loaded and enforcement mode
+- Ensure that essential key services (such as, SSH, any future web service) are protected by appropriate AppArmor profiles  
 - Learn how to view AppArmor logs to detect blocked actions  
 
 ### 2.4 Automatic Updates
 
 - Install and configure unattended-upgrades  
 - Enable automatic security updates  
-- Verify that configuration files are correct and that upgrade logs are being written  
+- Verify and confirm that configuration files are accurate and upgrade logs are being generated 
 
 ### 2.5 User and Privilege Management
 
-- Create a non-root administrative user (already done in Week 1 install)  
-- Ensure this user is in the sudo group with least-privilege usage  
+- Create a non-root administrative user (done in Week 1 install)  
+- Confirm that the user belongs to the sudo group, with least-privilege uaccess
 - Disable or lock direct root login where appropriate  
 - Use strong, unique passwords on all accounts  
 
 ### 2.6 Network Security
 
 - Keep the server inside the VirtualBox NAT network (no direct exposure to the internet)  
-- Only run services that are necessary for coursework (no extra daemons)  
+- Only run the services that are needed for coursework
 - Regularly check open ports using ss -tuln or netstat  
 - Later, configure fail2ban to protect against SSH brute-force attacks
 
-This checklist will be used in later weeks to verify security configuration.
+This checklist will be used in later weeks to confirm security settings.
 
 ## 3. Threat Model
 
-In this coursework my server runs inside a local VirtualBox NAT network, so it is not exposed directly to the internet. However, there are still realistic threats that I need to consider.
+For this coursework my server operated within a local VirtualBox NAT network, which means that it is not exposed directly to the internet. However, there still remains some realistic threats that must be taken into account.
 
 ### Threat 1 – Brute-force SSH attacks
 
 **Description:**  
-If SSH is misconfigured (for example, password login allowed from anywhere), an attacker could repeatedly try many passwords until one works.
+If SSH is improperly set up (such as permitting password login from any location) an intruder might repeatedly attempt passwords until a successful one is found.
 
 **Impact:**  
-The attacker could gain remote access to the server, read or modify files, install malware, or disrupt the system.
+The intruder might obtain control over the server, view or alter files deploy malicious software or interfere with the system.
 
 **Mitigations:**
 
-- Disable password-based SSH login and use **key-based authentication only**  
+- Disable password-based SSH login and use key-based authentication only  
 - Restrict SSH access to just my workstation IP using firewall rules  
-- Install and configure **fail2ban** to ban IP addresses that show repeated failed SSH logins  
+- Install and configure fail2ban to ban IP addresses that show repeated failed SSH logins  
 - Regularly review SSH logs (/var/log/auth.log) for suspicious activity  
 
 ---
@@ -117,17 +115,17 @@ The attacker could gain remote access to the server, read or modify files, insta
 ### Threat 2 – Misconfigured or overly open firewall
 
 **Description:**  
-If I accidentally allow too many ports or services in the firewall, unwanted network access may be possible from other machines on the host-only or NAT network.
+If I unintentionally permit many ports or services through the firewall unauthorized network access could occur from other devices, on the host-only or NAT network.
 
 **Impact:**  
-Extra open ports can expose services that are not secured or not needed, increasing the attack surface.
+Additional open ports might reveal services that are either unsecured or unnecessary thereby expanding the attack surface.
 
 **Mitigations:**
 
-- Use ufw with a **default deny** incoming policy  
+- Employ ufw, by setting the default policy to deny connection  s
 - Explicitly allow only:
   - SSH from my workstation  
-  - Any other port that I intentionally use for testing  
+  - Any other port that I deliberately choose for testing  
 - Regularly list firewall rules and open ports and remove anything not needed  
 - Keep a record of which services are supposed to be running  
 
@@ -136,7 +134,7 @@ Extra open ports can expose services that are not secured or not needed, increas
 ### Threat 3 – Privilege escalation by a local user
 
 **Description:**  
-If a normal user account on the server is compromised, an attacker might try to gain sudo privileges or exploit misconfigurations to become root.
+If a regular user account, on the server is breached an attacker may attempt to acquire sudo rights or take advantage of configuration errors to escalate to root.
 
 **Impact:**  
 Full control over the system, ability to disable security settings, install rootkits, or damage files.
@@ -156,7 +154,7 @@ Full control over the system, ability to disable security settings, install root
 If the operating system or installed software is not updated, known security vulnerabilities may be left unpatched.
 
 **Impact:**  
-Attackers could exploit old vulnerabilities to gain access or crash services.
+Attackers might take advantage of security flaws to infiltrate systems or cause service disruptions.
 
 **Mitigations:**
 
@@ -167,9 +165,11 @@ Attackers could exploit old vulnerabilities to gain access or crash services.
 
 ---
 
-This threat model helps me understand which risks are most relevant to my small virtual server and shows how my planned security configuration directly reduces those risks.
+This threat model enables me to identify the risks pertinent, to my small virtual server and demonstrates how my intended security setup effectively mitigates those risks.
 
 ## Reflection:
-During Week 2, I learned how important planning is before making any security changes to a server. Instead of directly configuring tools like SSH or firewalls, I focused on understanding why these controls are needed and how they work together to protect a system. Creating the security checklist helped me see how different layers of security (SSH, firewall, AppArmor, updates, user management) connect to form a proper baseline. Developing the threat model also made me think like an attacker and identify weaknesses before they become real problems. This week improved my understanding of security principles and prepared me for the hands-on configuration work in later weeks.
 
+In Week 2, I realized the significance of planning prior to implementing any security modifications on a server. Than immediately adjusting tools like SSH or firewalls I concentrated on grasping the reasons, behind these controls and how they integrate to safeguard a system. Building the security checklist allowed me to understand how various security layers (SSH, firewall, AppArmor updates, user management) link together to establish a baseline. Creating the threat model also prompted me to think from an attacker’s perspective and spot vulnerabilities before they escalate into issues. This week improved my understanding of security principles and prepared me for the hands-on configuration work in later weeks.
+
+---
    
