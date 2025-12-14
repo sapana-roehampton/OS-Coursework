@@ -1,4 +1,4 @@
-## 🔗 Quick Navigation  
+## Quick Navigation  
 [Week 1](week1.md) | [Week 2](week2.md) | [Week 3](week3.md) | [Week 4](week4.md) | [Week 5](week5.md) | [Week 6](week6.md) | [Week 7](week7.md)
 
 ---
@@ -8,15 +8,15 @@
 
 ## 1. Overview of Week 1
 
-This week focused on setting up the server environment required for the Operating Systems coursework. I installed Ubuntu Server 24.04 LTS inside VirtualBox on my Windows laptop, configured basic system settings, explored the Linux terminal for the first time, and collected essential system information using basic Linux commands. This setup created the foundation for all future security, monitoring, and performance tasks in later weeks.
+This week was primarily about setting up the server side of the IT infrastructure that is needed for Operating Systems Coursework. I set up Ubuntu Server 24.04 LTS within Virtual Box on my Window labtop as well as configured some basic system settings , I got to use linux terminal for my first time and harvest necessary information by using basic linux commands . This laid the ground work for all security, monitoring ,and performance activities in the future weeks to come.
 
 ---
 
 ## 2. System Architecture Diagram
 
-This diagram represents the system architecture implemented for this project. The Ubuntu Server 24.04 LTS runs as a headless virtual machine inside VirtualBox and is accessed securely from the Windows workstation using SSH over a NAT network.
+This diagram shows the system setup for this project. An Ubuntu Server 24.04 LTS operates as a headless virtual machine in VirtualBox. It is accessed securely from a Windows workstation using SSH over a NAT network.
 
-The following diagram represents the setup I created for Week 1.
+Diagram below illustrates the configuration I set up for your reference on the first week.
 
 **System Architecture Diagram**
 
@@ -26,21 +26,19 @@ The following diagram represents the setup I created for Week 1.
 
 ## 3. Distribution Selection Justification
 
-For this coursework, I selected Ubuntu Server 24.04 LTS as my operating system. I chose this distribution because it provides long-term security updates and strong stability. Ubuntu is widely used in cloud computing environments, which means the skills I learn here directly apply to real-world professional practice. Compared to alternatives like Debian and CentOS Stream, Ubuntu offers more up-to-date/newer pacakages and easy setup and installation which is ideal for this coursework.
-
-Overall, Ubuntu Server offers a balance of ease-of-use, security, stability, and industry relevance, making it the most appropriate distribution for this operating systems project.
+I opted for Ubuntu Server 24.04 LTS as the OS of interest in this coursework. I made this choice because the distribution offers long term security updates and high stability. Ubunutu is mostly used in cloud computing environments, this therefore implies that the skills applied here are learnt and applied directly on real world professional practice. Unlike Debian and CentOS Stream alternatives, Ubuntu provides newer/up-to-date pacakages and easier setup/installation which are ideal for this coursework. At the most basic level, Ubuntu Server provides a good blend of user-friendliness, security, stability, and industry relevance thus making it the best distribution for this operating systems project.
 
 ---
 
 ## 4. Workstation configuration Decision
 
-For my workstation, I chose to use my Windows 11 laptop, which connects to the Ubuntu Server virtual machine through VirtualBox. Windows includes a built-in SSH client, allowing me to remotely manage the server exactly like the real system administrators. Using my physical laptop as the workstation is efficient because it saves memory, avoid running multiple VMs, and makes it easy to manage screenshots, browse documentation, and update my GitHub Pages journal.
+For my laptop of Windows 11 work station I have used the VirtualBox virtual machine that connects to the Ubuntu Server. The reason is that windows have a SSH client build in which allows me to connect to the server remotely and do work on it as if you are working on your own system as an administrator. Using my physical laptop as the workstation is efficient because it saves memory, avoid running multiple VMs, and makes it easy to manage screenshots, browse documentation, and update my GitHub Pages journal.
 
 ---
 
 ## 5. Network Configuration Documentation
 
-My Ubuntu Server is running inside VirtualBox using the default NAT network mode, which provides internet access to the virtual machine without exposing it directly to my physical network. I confirmed my network configuration using the command: ip addr to view the assigned internal IP address and confirm that the network interface is active. NAT mode is simple, secure, and appropriate for a local lab environment.
+My Ubuntu Server is virtualized using VirtualBox with default NAT networking, for this it has no direct access to the host machine so far and hence pretty safe to be reached by other computers on my network. I used the following command to check network settings: ip addr for checking the internal IP address assigned and verifying that the network interface is up. NAT mode is simple, secure, and appropriate for a local lab environment.
 
 ---
 
@@ -77,8 +75,7 @@ Below is the screenshot containing all required command output: Screenshot 2025-
 
 
 ## 7. Reflection on Week 1:
-
-This was my first time installing a headless Linux server. I learned how virtual machines work, how to navigate the Linux terminal, and how to collect system information. I now understand basic OS concepts such as memory usage, kernel version, storage allocation, and network interfaces. These skills prepare me for future weeks focused on SSH configuration, security hardening, monitoring, and performance evaluation.
+This was the first headless linux server that I set up. I got introduced to concepts like virtual machines, how to use the Linux terminal and get system information. I know some OS level concepts from Memory utilization, Kernel version, Storage allocation, Network Interfaces. These skills prepare me for future weeks focused on SSH configuration, security hardening, monitoring, and performance evaluation.
 
 Overall, Week 1 helped me build confidence using Linux and understanding the structure of an operating system.
 
