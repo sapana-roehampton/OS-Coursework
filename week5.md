@@ -30,9 +30,9 @@ AppArmor was activated on the server. Verified to ensure it was functioning corr
 ![AppArmor Status](images/week5-apparmor-status.png)
 <img width="1286" height="807" alt="week5-apparmor-status" src="https://github.com/user-attachments/assets/86f15c82-a730-4aa0-ac84-acc70a9a517d" />
 
-The screenshot confirms that:
-- AppArmor is **active**
-- Profiles are in **enforce** mode  
+This confirms:
+- AppArmor is active
+- Profiles are in enforce mode  
 This make sure that the system processes is perfectly being protected by AppArmor.
 
 ---
@@ -77,7 +77,7 @@ Fail2Ban was installed inorder to protect the SSH service from brute-force login
  sudo fail2ban-client status sshd
 ```
 
-###  **Evidence – Fail2Ban Running & SSH Jail Active**
+**Evidence – Fail2Ban Running & SSH Jail Active**
 ![Fail2Ban Status](images/week5-fail2ban-status.png)
 
 Evidence 1: Installation
@@ -146,7 +146,7 @@ systemctl is-enabled unattended-upgrades
 
 echo "===== CHECK COMPLETE ====="
 
-### Evidence
+**Evidence**
 
 <img width="1290" height="948" alt="week5-security-baseline (2)" src="https://github.com/user-attachments/assets/03bf2c92-cffe-4835-8771-3b2181e69f17" />
 
@@ -206,7 +206,7 @@ System uptime
 
 Top processes consuming CPU
 
-### Evidence  
+**Evidence**
 <img width="2286" height="1103" alt="monitor-server-output" src="https://github.com/user-attachments/assets/aacbab0c-ba49-4581-aac6-52025129cf3f" />
 
 
