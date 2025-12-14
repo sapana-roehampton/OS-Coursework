@@ -5,7 +5,7 @@
 
 #  Week 6 — Performance Evaluation & System Optimisation
 
-This week focuses on analysing system performance under different workloads, identifying bottlenecks, and applying optimisations to improve responsiveness and stability. All tests were performed on my Ubuntu VirtualBox server (`sapana-server`) using SSH access from my Windows host machine.
+This week specially focuses on examining the system efficiency across workloads detecting bottlenecks and implementing optimisations to enhance responsiveness and reliability. All evaluations were conducted on my Ubuntu VirtualBox server (`sapana-server`) via SSH connection, from my Windows host device.
 
 ---
 
@@ -127,22 +127,22 @@ ps aux --sort=-%cpu | head -6
 
 # 4. Bottleneck Analysis
 
-After analysing the system under load, several performance bottlenecks were identified.
-These bottlenecks guided the optimisation steps implemented later.
+After examining the system during usage, multiple performance constraints were discovered.
+These constraints directed the optimization procedures carried out subsequently.
 
 **CPU Bottleneck**
 
 1. During the stress test, CPU usage reached 100% across available cores.
 
-2. The process stress used ~47% per core.
+2. The processing stress consumed 47%, per core.
 
 3. System responsiveness slowed.
 
 4. Load average increased significantly.
 
 **Conclusion:**
-This is expected under artificial load. CPU becomes the limiting factor, confirming the system behaves correctly under pressure.
 
+Such behavior is anticipated with load. The CPU turns into the bottleneck validating that the system operates properly when stressed.
 
 **Memory Behaviour**
 
@@ -210,14 +210,13 @@ week6-throughput-test.png
 
 # 6. System Optimisations Applied
 
-Two optimisations were applied inside system optimisation.
+Two optimisations were applied inside the system optimisation.
 
 ## Optimisation 1 — Memory Optimisation(Better Memory Usage)
 
 Swappiness controls how aggressively Linux swaps memory to disk.  
-The default value 60 causes unnecessary swapping, slowing the system.
-Reducing it to **10** improves RAM performance and reduces latency.
-
+The preset value of 60 leads, to swapping, which reduces system performance.
+Bringing it down to **10** enhances RAM efficiency. Lowers latency.
 
 Before:
 cat /proc/sys/vm/swappiness
@@ -366,15 +365,15 @@ sudo blockdev --getra /dev/sda
 
 #  11. Conclusion
 
-By the end of Week 6, I accomplished:
+By the conclusion of Week 6, I completed:
 
-✓ Full baseline performance benchmarking  
-✓ Stress-testing the CPU, memory, and system behaviour  
-✓ Collecting and analysing performance data  
-✓ Applying two measurable system optimisations  
-✓ Comparing before/after performance metrics  
-✓ Documenting all results with tables, graphs, and screenshots  
+ Full baseline performance benchmarking  
+ Stress-testing the CPU, memory, and system behaviour  
+ Collecting and analysing performance data  
+ Applying two measurable system optimisations  
+ Comparing before/after performance metrics  
+ Documenting all the results with tables, graphs, and screenshots  
 
-This completes the performance evaluation and optimisation phase of the project.
+This marks the conclusion of the projects performance assessment and optimization stage.
 
 ---
